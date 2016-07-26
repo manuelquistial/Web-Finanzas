@@ -1,0 +1,154 @@
+{% extends 'frontend.html.twig' %}
+
+{% block id 'usuario' %}
+
+{% block nav %}
+	<ul class="nav navbar-nav navbar-right">
+		<li class="dropdown">
+	    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><p class="navbar-text"><strong>{{ app.user }} </strong><span class="glyphicon glyphicon-menu-down"></span></p></a>
+			<ul class="dropdown-menu">
+			<li><a href="{{ path('usuario_logout') }}">{{ 'Cerrar sesión'|trans }}</a></li>
+			</ul>
+	    </li>
+	</ul>
+{% endblock %}
+
+{% block article %}
+<div class="container">
+	<div class="row">
+		<div class="container">
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
+			  <img src="..." alt="...">
+			</a>
+		</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="fModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Editoriales</h4>
+		</div>
+		<div class="modal-body">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne">
+				      <h4 class="panel-title">
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Disponible</a>
+				        <a class="navbar-nav navbar-right" href="#" aria-expanded="true" aria-controls="collapseOne" style="padding-right: 15px;">$ 20.000.000</a>
+				      </h4>
+				    </div>
+				    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					  <div class="panel-body">
+					    <table class="table text-center">
+							<tr style="background-color: rgb(61, 152, 59); color: white;">
+								<td><strong>Rubro de egresos</strong></td>
+								<td><strong>Presupuesto inicial</strong></td>
+								<td><strong>Reservas</strong></td>
+								<td><strong>Egresos</strong></td>
+								<td><strong>Disponibilidad</strong></td>
+							</tr>
+							<tr>
+								<td>Gastos Generales</td>
+								<td>27.281.199</td>
+								<td>14.653.984</td>
+								<td>10.496.250</td>
+								<td>2.130.965</td>
+							</tr>
+							<tr>
+								<td>Adquisicion de BB y SS</td>
+								<td>27.281.199</td>
+								<td>14.653.984</td>
+								<td>10.496.250</td>
+								<td>2.130.965</td>
+							</tr>
+							<tr>
+								<td>Apoyo a movilidad nacional Comunicacion Social</td>
+								<td>27.281.199</td>
+								<td>14.653.984</td>
+								<td>10.496.250</td>
+								<td>2.130.965</td>
+							</tr>
+							<tr>
+								<td>Apoyo a movilidad internacional Comunicacion Social</td>
+								<td>27.281.199</td>
+								<td>14.653.984</td>
+								<td>10.496.250</td>
+								<td>2.130.965</td>
+							</tr>
+							<tr>
+								<td>Apoyo a movilidad nacional Linguistica y Literatura</td>
+								<td>27.281.199</td>
+								<td>14.653.984</td>
+								<td>10.496.250</td>
+								<td>2.130.965</td>
+							</tr>
+							<tr>
+								<td>Apoyo a movilidad internacional Linguistica y Literatura</td>
+								<td>27.281.199</td>
+								<td>14.653.984</td>
+								<td>10.496.250</td>
+								<td>2.130.965</td>
+							</tr>
+							<tr>
+							</tr>
+							<tr>
+								<td>TOTAL PROYECTO</td>
+								<td>27.281.199</td>
+								<td>14.653.984</td>
+								<td>10.496.250</td>
+								<td>2.130.965</td>
+							</tr>
+						 </table>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+/finanzas/app/config/parameters.yml
+/finanzas/build/
+/finanzas/phpunit.xml
+/finanzas/var/*
+!/finanzas/var/cache
+/finanzas/var/cache/*
+!finanzas/var/cache/.gitkeep
+!/finanzas/var/logs
+/finanzas/var/logs/*
+!finanzas/var/logs/.gitkeep
+!finanzas/var/sessions
+/finanzas/var/sessions/*
+!finanzas/var/sessions/.gitkeep
+!finanzas/var/SymfonyRequirements.php
+/finanzas/vendor/

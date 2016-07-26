@@ -1,0 +1,149 @@
+.page-header{
+    margin: 40px 0 0px;
+}
+
+.navbar-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 10px;
+    font-size: 18px;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+a:focus, a:hover {
+    color: #636363;
+    text-decoration: underline;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.panel-heading {
+    padding: 15px 15px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+.panel-group {
+    margin-bottom: 0px;
+}
+
+.modal-header {
+    padding: 12px;
+}
+
+.modal-dialog {
+    width: 1000px;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.panel {
+    border: 0px;
+}
+
+body{
+    background: url("../../../img/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#login{
+    padding: 20px;
+}
+
+.panel-footer{
+    font-size: 13px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    border-top: 0px;
+    background-color: transparent;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#title-login{
+    color: #000;
+    margin: 14px 0px;
+    text-align: center;
+}
+
+.form-control {
+    margin: 5px 0px;
+    font-size: 18px;
+}
+
+.container{
+    top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.logo-udea {
+    width: 180px;
+    height: 90px;
+}
+
+.title{
+    font-size: 24px;
+}
+
+.navbar-default .navbar-text {
+    color: #474747;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    color: #474747;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #474747;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #000;
+    background-color: #e7e7e7;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0px 10px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#content{
+    padding-top: 5px;
+    margin-bottom: 40px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px;
+}

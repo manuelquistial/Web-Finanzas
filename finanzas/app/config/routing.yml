@@ -1,0 +1,14 @@
+UsuarioBundle:
+    resource: "@UsuarioBundle/Resources/config/routing.yml"
+    prefix:   /usuario
+
+AdminBundle:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+root:
+   path: /
+   defaults:
+      _controller: FrameworkBundle:Redirect:urlRedirect
+      path: /usuario/login
+      permanent: true

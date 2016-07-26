@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: 3306
+    database_name: finanzas
+    database_user: finanzas
+    database_password: Finanzas*01
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 2bfbf00e4d2d01bb1c0ade911f65723e6c90bda4

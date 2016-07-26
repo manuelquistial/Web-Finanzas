@@ -1,0 +1,34 @@
+{% extends 'frontend.html.twig' %}
+
+{% block id 'usuario' %}
+
+{% block nav %}
+    <ul class="navbar-nav navbar-right">
+        <a href="{{ path('admin_login') }}"><p class="navbar-text"><strong>{{ 'Administrador'|trans }}</strong></p></a>
+    </ul>
+{% endblock %}
+
+{% block login %}
+
+<div class="container" style="top:120px;">
+    <div id="login" class="col-xs-6 col-sm-6 col-md-4 col-centered">
+        <section id="entrar">
+            <h3 id="title-login">{{ 'Ingreso de Usuario'|trans }}</h3>
+
+            <form action="{{ path('usuario_login_check') }}" method="post">
+                {% if error %}
+                    <div class="errores-globales">
+                        <span class="label">ERROR</span> {{ error.message|trans }}
+                    </div>
+                {% endif %}
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" placeholder="Usuario" />
+                    <input type="password" class="form-control" id="password" name="_password" placeholder="Contraseña"/>
+                </div>
+                <button class="btn btn-default" type="submit" name="login">Entrar</button>
+            </form>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends '::admin.html.twig' %}
+
+
+{% block navLi %}
+	<ul class="nav navbar-nav">
+		<li role="navigation" ><a href="{{ path('admin_usuarios') }}">Lista Usuarios</a></li>
+		<li role="navigation" class="active"><a href="{{ path('admin_registro') }}">Registro Usuarios</a></li>
+	</ul>
+{% endblock %}
+
+
+{% block article %}
+	<div id="content" class="col-sm-9 col-md-9 col-centered">
+		<h2>Registro de Usuarios</h2>
+		<form action="{{ path('admin_registro') }}" method="POST">
+			{{ form_errors(formulario) }}
+			<legend>Datos personales</legend>
+				<div class="form-group">
+					{{ form_label(formulario.nombre) }}
+					<span>{{ form_widget(formulario.nombre) }}</span>
+				</div>
+				<div class="form-group">
+					{{ form_label(formulario.apellidos) }}
+					<span>{{ form_widget(formulario.apellidos) }}</span>
+				</div>
+				<div class="form-group">
+					{{ form_label(formulario.email) }}
+				<span>{{ form_widget(formulario.email) }}</span>
+				</div>
+			</fieldset>
+			<fieldset>
+			<legend>Datos de acceso</legend>
+			<div class="form-group">
+				{{ form_label(formulario.usuario) }}
+				<span>{{ form_widget(formulario.usuario) }}</span>
+			</div>
+			<div class="form-group">
+				{{ form_label(formulario.password.first) }}
+				<span>{{ form_widget(formulario.password.first) }}</span>
+			</div>
+			<div class="form-group">
+				{{ form_label(formulario.password.second) }}
+				<span>{{ form_widget(formulario.password.second) }}</span>
+			</div>
+			<div class="form-group">
+				<label>Administrador:&nbsp;</label>
+				{{ form_label(formulario.adminC.0) }}
+				<span>{{ form_widget(formulario.adminC.0) }}</span>&nbsp;
+				{{ form_label(formulario.adminC.1) }}
+				<span>{{ form_widget(formulario.adminC.1) }}</span>
+			</div>
+			</fieldset>
+			{{ form_rest(formulario) }}
+			<button class="btn btn-default" type="submit">Registrar</button>
+		</form>
+	</div>
+{% endblock %}
