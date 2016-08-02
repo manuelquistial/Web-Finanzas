@@ -10,23 +10,25 @@
 
 {% block article %}
 <div id="content" class="col-sm-9 col-md-9 col-centered">
-	<table class="table table-striped">
-			<tr>
-				<td>Nombre</td>
-				<td>Apellidos</td>
-				<td>Usuario</td>
-				<td>E-Mail</td>
-				<td></td>
-			</tr>
-		{% for usuario in usuarios %}
-			<tr>
-				<td>{{ usuario.nombre }}</td>
-				<td>{{ usuario.apellidos }}</td>
-				<td>{{ usuario.usuario }}</td>
-				<td>{{ usuario.email }}</td>
-				<td><a href="{{ path('admin_usuarios_borrar', { 'id': usuario.id }) }}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-			</tr>
-		{% endfor %}
-	</table>
+	<div class="table-responsie">
+		<table class="table table-striped">
+				<tr>
+					<td>Nombre</td>
+					<td>Apellidos</td>
+					<td>Usuario</td>
+					<td>E-Mail</td>
+					<td>Eliminar</td>
+				</tr>
+			{% for usuario in usuarios %}
+				<tr>
+					<td>{{ usuario.nombre }}</td>
+					<td>{{ usuario.apellidos }}</td>
+					<td>{{ usuario.usuario }}</td>
+					<td>{{ usuario.email }}</td>
+					<td><a href="{{ path('admin_usuarios_borrar', { 'id': usuario.id }) }}"><span class="btn btn-danger" aria-hidden="true"><span class="fa fa-trash-o" aria-hidden="true"></span></span></a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
 </div>
 {% endblock%}
