@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SigepBundle\Entity\IndicadoresEncuestaPs" table="indicadores_encuesta_ps">
+    <indexes>
+      <index name="proyecto" columns="proyecto"/>
+      <index name="cliente" columns="cliente"/>
+      <index name="servicio" columns="servicio"/>
+    </indexes>
+    <id name="codigo" type="integer" column="codigo">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fecha" type="date" column="fecha" nullable="false"/>
+    <many-to-one field="proyecto" target-entity="Proyectos" fetch="LAZY">
+      <join-columns>
+        <join-column name="proyecto" referenced-column-name="codigo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="cliente" target-entity="Personas" fetch="LAZY">
+      <join-columns>
+        <join-column name="cliente" referenced-column-name="Identificacion"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="servicio" target-entity="IndicadoresServicios" fetch="LAZY">
+      <join-columns>
+        <join-column name="servicio" referenced-column-name="codigo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="aspecto" target-entity="IndicadoresAspectos" mapped-by="encuesta" fetch="LAZY"/>
+  </entity>
+</doctrine-mapping>

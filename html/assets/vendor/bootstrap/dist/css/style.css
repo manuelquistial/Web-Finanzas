@@ -58,13 +58,13 @@ a:focus, a:hover {
     border: 0px;
 }
 
-body{
+/*body{
     background: url("../../../img/background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+}*/
 
 #login{
     padding: 20px;
@@ -80,7 +80,7 @@ body{
     background-color: transparent;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    color: rgba(255, 255, 255, 0.8);
+    /*color: rgba(255, 255, 255, 0.8);*/
 }
 
 #title-login{
@@ -149,4 +149,21 @@ body{
 
 .input-group{
     margin: 10px 0px;
+}
+
+#box-finanzas{
+    box-shadow: 0px 0px 15px rgb(136, 136, 136); 
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#title-thumb{
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+    color: #000;
+}
+
+.thumbnail{
+    margin-bottom: 10px;
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SigepBundle\Entity\Grupos" table="grupos">
+    <indexes>
+      <index name="tipo" columns="tipo"/>
+      <index name="dependencia" columns="dependencia"/>
+    </indexes>
+    <id name="codigo" type="integer" column="codigo">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nombre" type="string" column="nombre" length="250" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="ubicacion" type="string" column="ubicacion" length="250" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="observacion" type="text" column="observacion" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="alias" type="string" column="alias" length="250" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="direccion" type="string" column="direccion" length="250" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="telefono" type="string" column="telefono" length="15" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="fax" type="string" column="fax" length="15" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="url" type="string" column="url" length="150" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="tipo" target-entity="TiposGrupo" fetch="LAZY">
+      <join-columns>
+        <join-column name="tipo" referenced-column-name="codigo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="dependencia" target-entity="Dependencias" fetch="LAZY">
+      <join-columns>
+        <join-column name="dependencia" referenced-column-name="Codigo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="proyecto" target-entity="Proyectos" inversed-by="grupo" fetch="LAZY">
+      <join-table name="grupos_proyecto">
+        <join-columns>
+          <join-column name="grupo" referenced-column-name="codigo"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="proyecto" referenced-column-name="codigo"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+    <many-to-many field="linea" target-entity="Lineas" inversed-by="grupo" fetch="LAZY">
+      <join-table name="lineas_grupo">
+        <join-columns>
+          <join-column name="grupo" referenced-column-name="codigo"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="linea" referenced-column-name="codigo"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>

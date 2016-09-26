@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SigepBundle\Entity\Actividades" table="actividades">
+    <indexes>
+      <index name="FK__metas" columns="meta"/>
+    </indexes>
+    <id name="codigo" type="integer" column="codigo">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nombre" type="text" column="nombre" length="65535" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="inicio" type="date" column="inicio" nullable="false"/>
+    <field name="fin" type="date" column="fin" nullable="false"/>
+    <field name="lugar" type="string" column="lugar" length="150" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="meta" target-entity="Metas" fetch="LAZY">
+      <join-columns>
+        <join-column name="meta" referenced-column-name="codigo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="participante" target-entity="Participantes" mapped-by="actividad" fetch="LAZY"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,535 @@
+<?php
+
+namespace SigepBundle\Entity;
+
+/**
+ * Movimientos
+ */
+class Movimientos
+{
+    /**
+     * @var \DateTime
+     */
+    private $fecha;
+
+    /**
+     * @var integer
+     */
+    private $valor = '0';
+
+    /**
+     * @var string
+     */
+    private $observacion;
+
+    /**
+     * @var integer
+     */
+    private $codigoOperacion;
+
+    /**
+     * @var integer
+     */
+    private $iva = '0';
+
+    /**
+     * @var boolean
+     */
+    private $devuelto = '0';
+
+    /**
+     * @var \DateTime
+     */
+    private $fechaDevolucion;
+
+    /**
+     * @var boolean
+     */
+    private $habilitado = '1';
+
+    /**
+     * @var \DateTime
+     */
+    private $fechaRegistro;
+
+    /**
+     * @var integer
+     */
+    private $codigo;
+
+    /**
+     * @var \SigepBundle\Entity\Rubros
+     */
+    private $rubro;
+
+    /**
+     * @var \SigepBundle\Entity\CentrosCosto
+     */
+    private $centrocosto;
+
+    /**
+     * @var \SigepBundle\Entity\Proyectos
+     */
+    private $proyecto;
+
+    /**
+     * @var \SigepBundle\Entity\TiposMovimiento
+     */
+    private $tipo;
+
+    /**
+     * @var \SigepBundle\Entity\Personas
+     */
+    private $persona;
+
+    /**
+     * @var \SigepBundle\Entity\Movimientos
+     */
+    private $reserva;
+
+    /**
+     * @var \SigepBundle\Entity\Personas
+     */
+    private $usuarioRegistro;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $listado;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->listado = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     *
+     * @return Movimientos
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set valor
+     *
+     * @param integer $valor
+     *
+     * @return Movimientos
+     */
+    public function setValor($valor)
+    {
+        $this->valor = $valor;
+
+        return $this;
+    }
+
+    /**
+     * Get valor
+     *
+     * @return integer
+     */
+    public function getValor()
+    {
+        return $this->valor;
+    }
+
+    /**
+     * Set observacion
+     *
+     * @param string $observacion
+     *
+     * @return Movimientos
+     */
+    public function setObservacion($observacion)
+    {
+        $this->observacion = $observacion;
+
+        return $this;
+    }
+
+    /**
+     * Get observacion
+     *
+     * @return string
+     */
+    public function getObservacion()
+    {
+        return $this->observacion;
+    }
+
+    /**
+     * Set codigoOperacion
+     *
+     * @param integer $codigoOperacion
+     *
+     * @return Movimientos
+     */
+    public function setCodigoOperacion($codigoOperacion)
+    {
+        $this->codigoOperacion = $codigoOperacion;
+
+        return $this;
+    }
+
+    /**
+     * Get codigoOperacion
+     *
+     * @return integer
+     */
+    public function getCodigoOperacion()
+    {
+        return $this->codigoOperacion;
+    }
+
+    /**
+     * Set iva
+     *
+     * @param integer $iva
+     *
+     * @return Movimientos
+     */
+    public function setIva($iva)
+    {
+        $this->iva = $iva;
+
+        return $this;
+    }
+
+    /**
+     * Get iva
+     *
+     * @return integer
+     */
+    public function getIva()
+    {
+        return $this->iva;
+    }
+
+    /**
+     * Set devuelto
+     *
+     * @param boolean $devuelto
+     *
+     * @return Movimientos
+     */
+    public function setDevuelto($devuelto)
+    {
+        $this->devuelto = $devuelto;
+
+        return $this;
+    }
+
+    /**
+     * Get devuelto
+     *
+     * @return boolean
+     */
+    public function getDevuelto()
+    {
+        return $this->devuelto;
+    }
+
+    /**
+     * Set fechaDevolucion
+     *
+     * @param \DateTime $fechaDevolucion
+     *
+     * @return Movimientos
+     */
+    public function setFechaDevolucion($fechaDevolucion)
+    {
+        $this->fechaDevolucion = $fechaDevolucion;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaDevolucion
+     *
+     * @return \DateTime
+     */
+    public function getFechaDevolucion()
+    {
+        return $this->fechaDevolucion;
+    }
+
+    /**
+     * Set habilitado
+     *
+     * @param boolean $habilitado
+     *
+     * @return Movimientos
+     */
+    public function setHabilitado($habilitado)
+    {
+        $this->habilitado = $habilitado;
+
+        return $this;
+    }
+
+    /**
+     * Get habilitado
+     *
+     * @return boolean
+     */
+    public function getHabilitado()
+    {
+        return $this->habilitado;
+    }
+
+    /**
+     * Set fechaRegistro
+     *
+     * @param \DateTime $fechaRegistro
+     *
+     * @return Movimientos
+     */
+    public function setFechaRegistro($fechaRegistro)
+    {
+        $this->fechaRegistro = $fechaRegistro;
+
+        return $this;
+    }
+
+    /**
+     * Get fechaRegistro
+     *
+     * @return \DateTime
+     */
+    public function getFechaRegistro()
+    {
+        return $this->fechaRegistro;
+    }
+
+    /**
+     * Get codigo
+     *
+     * @return integer
+     */
+    public function getCodigo()
+    {
+        return $this->codigo;
+    }
+
+    /**
+     * Set rubro
+     *
+     * @param \SigepBundle\Entity\Rubros $rubro
+     *
+     * @return Movimientos
+     */
+    public function setRubro(\SigepBundle\Entity\Rubros $rubro = null)
+    {
+        $this->rubro = $rubro;
+
+        return $this;
+    }
+
+    /**
+     * Get rubro
+     *
+     * @return \SigepBundle\Entity\Rubros
+     */
+    public function getRubro()
+    {
+        return $this->rubro;
+    }
+
+    /**
+     * Set centrocosto
+     *
+     * @param \SigepBundle\Entity\CentrosCosto $centrocosto
+     *
+     * @return Movimientos
+     */
+    public function setCentrocosto(\SigepBundle\Entity\CentrosCosto $centrocosto = null)
+    {
+        $this->centrocosto = $centrocosto;
+
+        return $this;
+    }
+
+    /**
+     * Get centrocosto
+     *
+     * @return \SigepBundle\Entity\CentrosCosto
+     */
+    public function getCentrocosto()
+    {
+        return $this->centrocosto;
+    }
+
+    /**
+     * Set proyecto
+     *
+     * @param \SigepBundle\Entity\Proyectos $proyecto
+     *
+     * @return Movimientos
+     */
+    public function setProyecto(\SigepBundle\Entity\Proyectos $proyecto = null)
+    {
+        $this->proyecto = $proyecto;
+
+        return $this;
+    }
+
+    /**
+     * Get proyecto
+     *
+     * @return \SigepBundle\Entity\Proyectos
+     */
+    public function getProyecto()
+    {
+        return $this->proyecto;
+    }
+
+    /**
+     * Set tipo
+     *
+     * @param \SigepBundle\Entity\TiposMovimiento $tipo
+     *
+     * @return Movimientos
+     */
+    public function setTipo(\SigepBundle\Entity\TiposMovimiento $tipo = null)
+    {
+        $this->tipo = $tipo;
+
+        return $this;
+    }
+
+    /**
+     * Get tipo
+     *
+     * @return \SigepBundle\Entity\TiposMovimiento
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * Set persona
+     *
+     * @param \SigepBundle\Entity\Personas $persona
+     *
+     * @return Movimientos
+     */
+    public function setPersona(\SigepBundle\Entity\Personas $persona = null)
+    {
+        $this->persona = $persona;
+
+        return $this;
+    }
+
+    /**
+     * Get persona
+     *
+     * @return \SigepBundle\Entity\Personas
+     */
+    public function getPersona()
+    {
+        return $this->persona;
+    }
+
+    /**
+     * Set reserva
+     *
+     * @param \SigepBundle\Entity\Movimientos $reserva
+     *
+     * @return Movimientos
+     */
+    public function setReserva(\SigepBundle\Entity\Movimientos $reserva = null)
+    {
+        $this->reserva = $reserva;
+
+        return $this;
+    }
+
+    /**
+     * Get reserva
+     *
+     * @return \SigepBundle\Entity\Movimientos
+     */
+    public function getReserva()
+    {
+        return $this->reserva;
+    }
+
+    /**
+     * Set usuarioRegistro
+     *
+     * @param \SigepBundle\Entity\Personas $usuarioRegistro
+     *
+     * @return Movimientos
+     */
+    public function setUsuarioRegistro(\SigepBundle\Entity\Personas $usuarioRegistro = null)
+    {
+        $this->usuarioRegistro = $usuarioRegistro;
+
+        return $this;
+    }
+
+    /**
+     * Get usuarioRegistro
+     *
+     * @return \SigepBundle\Entity\Personas
+     */
+    public function getUsuarioRegistro()
+    {
+        return $this->usuarioRegistro;
+    }
+
+    /**
+     * Add listado
+     *
+     * @param \SigepBundle\Entity\Listados $listado
+     *
+     * @return Movimientos
+     */
+    public function addListado(\SigepBundle\Entity\Listados $listado)
+    {
+        $this->listado[] = $listado;
+
+        return $this;
+    }
+
+    /**
+     * Remove listado
+     *
+     * @param \SigepBundle\Entity\Listados $listado
+     */
+    public function removeListado(\SigepBundle\Entity\Listados $listado)
+    {
+        $this->listado->removeElement($listado);
+    }
+
+    /**
+     * Get listado
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getListado()
+    {
+        return $this->listado;
+    }
+}

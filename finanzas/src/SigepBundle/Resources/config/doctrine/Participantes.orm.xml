@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SigepBundle\Entity\Participantes" table="participantes">
+    <indexes>
+      <index name="proyecto" columns="proyecto"/>
+      <index name="rol" columns="rol"/>
+      <index name="IDX_19E6E1C451E5B69B" columns="persona"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="unico" columns="persona,proyecto,rol"/>
+    </unique-constraints>
+    <id name="codigo" type="integer" column="codigo">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="dedicacionHoraria" type="string" column="dedicacion_horaria" length="5" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="vinculacion" type="string" column="vinculacion" length="30" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="fechaInicio" type="string" column="fecha_inicio" length="15" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="fechaFin" type="string" column="fecha_fin" length="15" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="proyecto" target-entity="Proyectos" fetch="LAZY">
+      <join-columns>
+        <join-column name="proyecto" referenced-column-name="codigo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="persona" target-entity="Personas" fetch="LAZY">
+      <join-columns>
+        <join-column name="persona" referenced-column-name="Identificacion"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="rol" target-entity="Roles" fetch="LAZY">
+      <join-columns>
+        <join-column name="rol" referenced-column-name="Codigo"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="actividad" target-entity="Actividades" inversed-by="participante" fetch="LAZY">
+      <join-table name="tareas">
+        <join-columns>
+          <join-column name="participante" referenced-column-name="codigo"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="actividad" referenced-column-name="codigo"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>

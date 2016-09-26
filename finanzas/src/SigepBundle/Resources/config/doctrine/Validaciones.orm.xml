@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SigepBundle\Entity\Validaciones" table="validaciones">
+    <indexes>
+      <index name="FK_validaciones_personas" columns="realizado"/>
+      <index name="IDX_894B474151A7B686" columns="criterio"/>
+    </indexes>
+    <id name="mes" type="boolean" column="mes"/>
+    <id name="anio" type="smallint" column="anio"/>
+    <id name="criterio" association-key="true"/>
+    <field name="fecha" type="date" column="fecha" nullable="false"/>
+    <field name="cumplimiento" type="string" column="cumplimiento" length="1" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+        <option name="comment">0: NO, 1:SI, 2:NC</option>
+        <option name="default">2</option>
+      </options>
+    </field>
+    <field name="fuente" type="string" column="fuente" length="500" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="observaciones" type="string" column="observaciones" length="500" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="recomendaciones" type="string" column="recomendaciones" length="500" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <one-to-one field="criterio" target-entity="Criterios" fetch="LAZY">
+      <join-columns>
+        <join-column name="criterio" referenced-column-name="codigo"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="realizado" target-entity="Personas" fetch="LAZY">
+      <join-columns>
+        <join-column name="realizado" referenced-column-name="Identificacion"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
