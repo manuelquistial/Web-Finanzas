@@ -423,10 +423,104 @@ class DefaultController extends Controller
         $qb14482622 ->where('m.proyecto = 144 AND m.rubro = 8262 AND m.tipo = 2 ');
         $val14482622  = $qb14482622->getQuery()->getResult();
 
+        //Proyecto 138
+
+        $qb13882234 = $em->createQueryBuilder();
+        $qb13882234 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882234 ->where('m.proyecto = 138 AND m.rubro = 8223 AND m.tipo = 4 ');
+        $val13882234  = $qb13882234->getQuery()->getResult();
+
+        $qb13882244 = $em->createQueryBuilder();
+        $qb13882244 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882244 ->where('m.proyecto = 138 AND m.rubro = 8224 AND m.tipo = 4 ');
+        $val13882244  = $qb13882244->getQuery()->getResult();
+
+        $qb13882254 = $em->createQueryBuilder();
+        $qb13882254->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882254 ->where('m.proyecto = 138 AND m.rubro = 8225 AND m.tipo = 4 ');
+        $val13882254  = $qb13882254->getQuery()->getResult();
+
+        $qb13882233 = $em->createQueryBuilder();
+        $qb13882233 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882233 ->where('m.proyecto = 138 AND m.rubro = 8223 AND m.tipo = 3 ');
+        $val13882233  = $qb13882233->getQuery()->getResult();
+
+        $qb13882243 = $em->createQueryBuilder();
+        $qb13882243 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882243 ->where('m.proyecto = 138 AND m.rubro = 8224 AND m.tipo = 3 ');
+        $val13882243  = $qb13882243->getQuery()->getResult();
+
+        $qb13882253 = $em->createQueryBuilder();
+        $qb13882253->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882253 ->where('m.proyecto = 138 AND m.rubro = 8225 AND m.tipo = 3 ');
+        $val13882253  = $qb13882253->getQuery()->getResult();
+
+        $qb13882232 = $em->createQueryBuilder();
+        $qb13882232 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882232 ->where('m.proyecto = 138 AND m.rubro = 8223 AND m.tipo = 2 ');
+        $val13882232  = $qb13882232->getQuery()->getResult();
+
+        $qb13882242 = $em->createQueryBuilder();
+        $qb13882242 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882242 ->where('m.proyecto = 138 AND m.rubro = 8224 AND m.tipo = 2 ');
+        $val13882242  = $qb13882242->getQuery()->getResult();
+
+        $qb13882252 = $em->createQueryBuilder();
+        $qb13882252 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb13882252 ->where('m.proyecto = 138 AND m.rubro = 8225 AND m.tipo = 2 ');
+        $val13882252  = $qb13882252->getQuery()->getResult();
 
 
 
-		$response = $this->render('UsuarioBundle:Default:finanzas.html.twig', array('val14082472' => $val14082472, 'val14082482' => $val14082482, 'val14082492' => $val14082492, 'val14082502' => $val14082502, 'val14082473' => $val14082473, 'val14082483' => $val14082483, 'val14082493' => $val14082493, 'val14082503' => $val14082503, 'val14082474' => $val14082474, 'val14082484' => $val14082484, 'val14082494' => $val14082494, 'val14082504' => $val14082504, 'val14182512' => $val14182512, 'val14182522' => $val14182522, 'val14182532' => $val14182532, 'val14182542' => $val14182542, 'val14182513' => $val14182513, 'val14182523' => $val14182523, 'val14182533' => $val14182533, 'val14182543' => $val14182543, 'val14182514' => $val14182514, 'val14182524' => $val14182524, 'val14182534' => $val14182534, 'val14182544' => $val14182544, 'val14382572' => $val14382572, 'val14382582' => $val14382582, 'val14382573' => $val14382573, 'val14382583' => $val14382583, 'val14382574' => $val14382574, 'val14382584' => $val14382584, 'val13982442' => $val13982442, 'val13982452' => $val13982452, 'val13982462' => $val13982462, 'val13982443' => $val13982443, 'val13982453' => $val13982453, 'val13982463' => $val13982463, 'val13982444' => $val13982444, 'val13982454' => $val13982454, 'val13982464' => $val13982464, 'val14482592' => $val14482592, 'val14482602' => $val14482602, 'val14482612' => $val14482612, 'val14482622' => $val14482622, 'val14482593' => $val14482593, 'val14482603' => $val14482603, 'val14482613' => $val14482613, 'val14482623' => $val14482623, 'val14482594' => $val14482594, 'val14482604' => $val14482604, 'val14482614' => $val14482614, 'val14482624' => $val14482624));
+        //Proyecto 145
+
+        $qb14582634 = $em->createQueryBuilder();
+        $qb14582634 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb14582634 ->where('m.proyecto = 145 AND m.rubro = 8263 AND m.tipo = 4 ');
+        $val14582634  = $qb14582634->getQuery()->getResult();
+
+        $qb14582644 = $em->createQueryBuilder();
+        $qb14582644 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb14582644 ->where('m.proyecto = 145 AND m.rubro = 8264 AND m.tipo = 4 ');
+        $val14582644  = $qb14582644->getQuery()->getResult();
+
+        $qb14582633 = $em->createQueryBuilder();
+        $qb14582633 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb14582633 ->where('m.proyecto = 145 AND m.rubro = 8263 AND m.tipo = 3 ');
+        $val14582633  = $qb14582633->getQuery()->getResult();
+
+        $qb14582643 = $em->createQueryBuilder();
+        $qb14582643 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb14582643 ->where('m.proyecto = 145 AND m.rubro = 8264 AND m.tipo = 3 ');
+        $val14582643  = $qb14582643->getQuery()->getResult();
+
+        $qb14582632 = $em->createQueryBuilder();
+        $qb14582632 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb14582632 ->where('m.proyecto = 145 AND m.rubro = 8263 AND m.tipo = 2 ');
+        $val14582632  = $qb14582632->getQuery()->getResult();
+
+        $qb14582642 = $em->createQueryBuilder();
+        $qb14582642 ->select('m.valor')
+            ->from('SigepBundle:Movimientos', 'm');
+        $qb14582642 ->where('m.proyecto = 145 AND m.rubro = 8264 AND m.tipo = 2 ');
+        $val14582642  = $qb14582642->getQuery()->getResult();
+
+
+		$response = $this->render('UsuarioBundle:Default:finanzas.html.twig', array('val14082472' => $val14082472, 'val14082482' => $val14082482, 'val14082492' => $val14082492, 'val14082502' => $val14082502, 'val14082473' => $val14082473, 'val14082483' => $val14082483, 'val14082493' => $val14082493, 'val14082503' => $val14082503, 'val14082474' => $val14082474, 'val14082484' => $val14082484, 'val14082494' => $val14082494, 'val14082504' => $val14082504, 'val14182512' => $val14182512, 'val14182522' => $val14182522, 'val14182532' => $val14182532, 'val14182542' => $val14182542, 'val14182513' => $val14182513, 'val14182523' => $val14182523, 'val14182533' => $val14182533, 'val14182543' => $val14182543, 'val14182514' => $val14182514, 'val14182524' => $val14182524, 'val14182534' => $val14182534, 'val14182544' => $val14182544, 'val14382572' => $val14382572, 'val14382582' => $val14382582, 'val14382573' => $val14382573, 'val14382583' => $val14382583, 'val14382574' => $val14382574, 'val14382584' => $val14382584, 'val13982442' => $val13982442, 'val13982452' => $val13982452, 'val13982462' => $val13982462, 'val13982443' => $val13982443, 'val13982453' => $val13982453, 'val13982463' => $val13982463, 'val13982444' => $val13982444, 'val13982454' => $val13982454, 'val13982464' => $val13982464, 'val14482592' => $val14482592, 'val14482602' => $val14482602, 'val14482612' => $val14482612, 'val14482622' => $val14482622, 'val14482593' => $val14482593, 'val14482603' => $val14482603, 'val14482613' => $val14482613, 'val14482623' => $val14482623, 'val14482594' => $val14482594, 'val14482604' => $val14482604, 'val14482614' => $val14482614, 'val14482624' => $val14482624, 'val13882232' => $val13882232, 'val13882242' => $val13882242, 'val13882252' => $val13882252, 'val13882233' => $val13882233, 'val13882243' => $val13882243, 'val13882253' => $val13882253, 'val13882234' => $val13882234, 'val13882244' => $val13882244, 'val13882254' => $val13882254, 'val14582632' => $val14582632, 'val14582642' => $val14582642, 'val14582633' => $val14582633, 'val14582643' => $val14582643, 'val14582634' => $val14582634, 'val14582644' => $val14582644));
         $response->headers->addCacheControlDirective('no-cache', true);
         $response->headers->addCacheControlDirective('max-age', 0);
         $response->headers->addCacheControlDirective('must-revalidate', true);
