@@ -18,6 +18,13 @@
 	<div class="row">
 		<div class="container">
 
+			{% set rubro = 'Rubro de Egresos' %}
+
+			{% set recurso = 'Disponibilidad de Recursos' %}
+			{% set totalN = 'Total de Ingresos Netos' %}
+			{% set toalC = 'Total Valores Comprometidos (Res+Egr)' %}
+			{% set recurD = 'Resursos Disponibles' %}
+
 			{% set sum114 = 0 %} 
 			{% for a114 in val14082474 %}
 			    {% set sum114 = sum114 + a114.valor %}
@@ -79,6 +86,11 @@
 			    {% set sum342 = sum342 + a342.valor %}
 			{% endfor %}
 
+			{% set sum341 = 0 %} 
+			{% for a341 in val1401 %}
+			    {% set sum341 = sum341 + a341.valor %}
+			{% endfor %}
+
 
 			{% set rub1 = (sum114 - sum213 - sum312) %}
 			{% set rub2 = (sum124 - sum223 - sum322) %}
@@ -127,7 +139,6 @@
 			    {% set sum543 = sum543 + a543.valor %}
 			{% endfor %}
 
-
 			{% set sum612 = 0 %} 
 			{% for a612 in val14182512 %}
 			    {% set sum612 = sum612 + a612.valor %}
@@ -146,6 +157,11 @@
 			{% set sum642 = 0 %} 
 			{% for a642 in val14182542 %}
 			    {% set sum642 = sum642 + a642.valor %}
+			{% endfor %}
+
+			{% set sum641 = 0 %} 
+			{% for a641 in val1411 %}
+			    {% set sum641 = sum641 + a641.valor %}
 			{% endfor %}
 
 
@@ -185,6 +201,12 @@
 			{% set sum922 = 0 %} 
 			{% for a922 in val14382582 %}
 			    {% set sum922 = sum922 + a922.valor %}
+			{% endfor %}
+
+
+			{% set sum921 = 0 %} 
+			{% for a921 in val1431 %}
+			    {% set sum921 = sum921 + a921.valor %}
 			{% endfor %}
 
 
@@ -237,6 +259,11 @@
 			{% set sum1232 = 0 %} 
 			{% for a1232 in val13982462 %}
 			    {% set sum1232 = sum1232 + a1232.valor %}
+			{% endfor %}
+
+			{% set sum1231 = 0 %} 
+			{% for a1231 in val1391 %}
+			    {% set sum1231 = sum1231 + a1231.valor %}
 			{% endfor %}
 
 
@@ -306,6 +333,11 @@
 			    {% set sum1542 = sum1542 + a1542.valor %}
 			{% endfor %}
 
+			{% set sum1541 = 0 %} 
+			{% for a1541 in val1441 %}
+			    {% set sum1541 = sum1541 + a1541.valor %}
+			{% endfor %}
+
 
 
 			{% set rub14 = (sum1314 - sum1413 - sum1512) %}
@@ -360,6 +392,11 @@
 			    {% set sum1832 = sum1832 + a1832.valor %}
 			{% endfor %}
 
+			{% set sum1831 = 0 %} 
+			{% for a1831 in val1381 %}
+			    {% set sum1831 = sum1831 + a1831.valor %}
+			{% endfor %}
+
 
 			{% set rub18 = (sum1614 - sum1713 - sum1812) %}
 			{% set rub19 = (sum1624 - sum1723 - sum1822) %}
@@ -398,94 +435,145 @@
 			    {% set sum2122 = sum2122 + a2122.valor %}
 			{% endfor %}
 
+			{% set sum2121 = 0 %} 
+			{% for a2121 in val1451 %}
+			    {% set sum2121 = sum2121 + a2121.valor %}
+			{% endfor %}
+
 
 			
 			{% set rub21 = (sum1914 - sum2013 - sum2112) %}
 			{% set rub22 = (sum1924 - sum2023 - sum2122) %}
 
 
+
+
+			{% set sum2214 = 0 %} 
+			{% for a2214 in val14282554 %}
+			    {% set sum2214 = sum2214 + a2214.valor %}
+			{% endfor %}
+
+			{% set sum2224= 0 %} 
+			{% for a2224 in val14282564 %}
+			    {% set sum2224= sum2224+ a2224.valor %}
+			{% endfor %}
+
+			{% set sum2313 = 0 %} 
+			{% for a2313 in val14282553 %}
+			    {% set sum2313 = sum2313 + a2313.valor %}
+			{% endfor %}
+
+			{% set sum2323 = 0 %} 
+			{% for a2323 in val14282563 %}
+			    {% set sum2323 = sum2323 + a2323.valor %}
+			{% endfor %}
+
+			{% set sum2412 = 0 %} 
+			{% for a2412 in val14282552 %}
+			    {% set sum2412 = sum2412 + a2412.valor %}
+			{% endfor %}
+
+			{% set sum2422 = 0 %} 
+			{% for a2422 in val14282562 %}
+			    {% set sum2422 = sum2422 + a2422.valor %}
+			{% endfor %}
+
+			{% set sum2421 = 0 %} 
+			{% for a2421 in val1421%}
+			    {% set sum2421 = sum2421 + a2421.valor %}
+			{% endfor %}
+
+
 			
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/check.png') }}" alt="Gastos e Ingresos">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">Gastos e Ingresos</h5>
-			    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#fiModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/calendar.png') }}" alt="Apoyo a Eventos">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">Apoyo a Eventos</h5>
-			    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#foModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/open-book.png') }}" alt="Proyectos Editoriales">
-					
-				</a>
-				<div class="caption">
-				    	<h5 id="title-thumb">Editoriales</h5>
+			{% set rub24 = (sum2214 - sum2313 - sum2412) %}
+			{% set rub25 = (sum2224 - sum2323 - sum2422) %}
+
+
+			{% set sum2514 = 0 %} 
+			{% for a2514 in val3982774 %}
+			    {% set sum2514 = sum2514 + a2514.valor %}
+			{% endfor %}
+
+			{% set sum2524= 0 %} 
+			{% for a2524 in val3982784 %}
+			    {% set sum2524= sum2524+ a2524.valor %}
+			{% endfor %}
+
+			{% set sum2534 = 0 %} 
+			{% for a2534 in val3982794 %}
+			    {% set sum2534 = sum2534 + a2534.valor %}
+			{% endfor %}
+
+			{% set sum2544 = 0 %} 
+			{% for a2544 in val3982804 %}
+			    {% set sum2544 = sum2544 + a2544.valor %}
+			{% endfor %}
+
+			{% set sum2613 = 0 %} 
+			{% for a2613 in val3982773 %}
+			    {% set sum2613 = sum2613 + a2613.valor %}
+			{% endfor %}
+
+			{% set sum2623 = 0 %} 
+			{% for a2623 in val3982783 %}
+			    {% set sum2623 = sum2623 + a2623.valor %}
+			{% endfor %}
+
+			{% set sum2633 = 0 %} 
+			{% for a2633 in val3982793 %}
+			    {% set sum2633 = sum2633 + a2633.valor %}
+			{% endfor %}
+
+			{% set sum2643 = 0 %} 
+			{% for a2643 in val3982803 %}
+			    {% set sum2643 = sum2643 + a2643.valor %}
+			{% endfor %}
+
+			{% set sum2712 = 0 %} 
+			{% for a2712 in val3982772 %}
+			    {% set sum2712 = sum2712 + a2712.valor %}
+			{% endfor %}
+
+			{% set sum2722 = 0 %} 
+			{% for a2722 in val3982782 %}
+			    {% set sum2722 = sum2722 + a2722.valor %}
+			{% endfor %}
+
+			{% set sum2732 = 0 %} 
+			{% for a2732 in val3982792 %}
+			    {% set sum2732 = sum2732 + a2732.valor %}
+			{% endfor %}
+
+			{% set sum2742 = 0 %} 
+			{% for a2742 in val3982802 %}
+			    {% set sum2742 = sum2742 + a2742.valor %}
+			{% endfor %}
+
+			{% set sum2741 = 0 %} 
+			{% for a2741 in val391 %}
+			    {% set sum2741 = sum2741 + a2741.valor %}
+			{% endfor %}
+
+
+			{% set rub26 = (sum2514 - sum2613 - sum2712) %}
+			{% set rub27 = (sum2524 - sum2623 - sum2722) %}
+			{% set rub28 = (sum2534 - sum2633 - sum2732) %}
+			{% set rub29 = (sum2544 - sum2643 - sum2742) %}
+
+			
+			{% set boxTitle = ['Gastos e Ingresos', 'Apoyo a Eventos', 'Editoriales', 'Docentes', 'Estudiantes', 'Investigacion', 'No Docente', 'Bienestar Estudiantil', 'Extension', ''] %}
+
+			{% for box in range(0, (boxTitle|length)-1)%}
+				<div class="col-xs-3 col-md-2">
+					<a id="box-finanzas" href="#" class="thumbnail" data-target="#nModal" data-toggle="modal">
+						<img src="{{ asset('assets/vendor/img/png/imgBox'~box~'.png') }}" alt="Gastos e Inversion">
+						
+					</a>
+					<div class="caption">
+				    	<h5 id="title-thumb">{{boxTitle[box]}}</h5>
 				    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/professor.png') }}" alt="Capacitacion y movilidad docente">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">Docentes</h5>
-			    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#sModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/desk.png') }}" alt="Apoyo Investigacion estudiantil">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">Estudiantes</h5>
-			    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#tModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/employees.png') }}" alt="Capacitacion y movilidad no docente">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">No Docente</h5>
-			    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#siModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/like.png') }}" alt="Apoyo de permanencia estudiantil y bienestar">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">Bienestar Estudiantil</h5>
-			    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#seModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/business-partnership.png') }}" alt="Apoyo a proyectos formales de extenson solidaria">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">Extension Solidaria</h5>
-			    </div>
-			</div>
-			<div class="col-xs-3 col-md-2">
-				<a id="box-finanzas" href="#" class="thumbnail" data-target="#fModal" data-toggle="modal">
-					<img src="{{ asset('assets/vendor/img/png/presentation.png') }}" alt="Costos">
-					
-				</a>
-				<div class="caption">
-			    	<h5 id="title-thumb">Thumbnail label</h5>
-			    </div>
-			</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>
@@ -495,21 +583,21 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Docentes</strong></h4>
+			<h4 class="modal-title" id="myModalLabel"><strong>Capacitación y movilidad del personal docente</strong></h4>
 		</div>
 		<div class="modal-body">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			  	<div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
 				      <h4 class="panel-title">
-				        <a>Disponible</a>
-				        <a class="navbar-nav navbar-right" style="padding-right: 15px;">$ 20.000.000</a>
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum341 |number_format(0, ',', '.')}}</strong></a>
 				      </h4>
 				    </div>
 				    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 					  <div class="panel-body">
 					    <table class="table text-center">
-							<tr style="background-color: rgb(61, 152, 59); color: white;">
+							<tr class="table-style">
 								<td><strong>Rubro de egresos</strong></td>
 								<td><strong>Presupuesto inicial</strong></td>
 								<td><strong>Reservas</strong></td>
@@ -518,28 +606,28 @@
 							</tr>
 							
 							<tr>
-								<td>Eventos y certámenes propios</td>
+								<td>Apoyo a movilidad nacional Comunicacion Social</td>
 								<td>{{sum114 |number_format(0, ',', '.')}}</td>
 								<td>{{sum213 |number_format(0, ',', '.')}}</td>
 								<td>{{sum312 |number_format(0, ',', '.')}}</td>
 								<td>{{rub1 |number_format(0, ',', '.')}}</td>
 							</tr>
 							<tr>
-								<td>Apoyo a eventos y certámenes liderados por docentes y estudiantes de la Facultad</td>
+								<td>Apoyo a movilidad internacional Comunicacion Social</td>
 								<td>{{sum124 |number_format(0, ',', '.')}}</td>
 								<td>{{sum223 |number_format(0, ',', '.')}}</td>
 								<td>{{sum322 |number_format(0, ',', '.')}}</td>
 								<td>{{rub2 |number_format(0, ',', '.')}}</td>
 							</tr>
 							<tr>
-								<td>Apoyo a eventos y certámenes liderados por otras dependencias u organizaciones</td>
+								<td>Apoyo a movilidad nacional Linguistica y Literatura</td>
 								<td>{{sum134 |number_format(0, ',', '.')}}</td>
 								<td>{{sum233 |number_format(0, ',', '.')}}</td>
 								<td>{{sum332 |number_format(0, ',', '.')}}</td>
 								<td>{{rub3 |number_format(0, ',', '.')}}</td>
 							</tr>
 							<tr>
-								<td>Celebraciones institucionales de la Facultad</td>
+								<td>Apoyo a movilidad internacional Linguistica y Literatura</td>
 								<td>{{sum144 |number_format(0, ',', '.')}}</td>
 								<td>{{sum243 |number_format(0, ',', '.')}}</td>
 								<td>{{sum342 |number_format(0, ',', '.')}}</td>
@@ -556,6 +644,30 @@
 							</tr>
 						 </table>
 					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td>Apoyo a movilidad nacional Comunicacion Social</td>
+								<td>{{sum114 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Apoyo a movilidad internacional Comunicacion Social</td>
+								<td>{{sum124 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Apoyo a movilidad nacional Linguistica y Literatura</td>
+								<td>{{sum134 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+						 </table>
+					  </div>
 					</div>
 				</div>
 			</div>
@@ -569,21 +681,21 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Estudiantes</strong></h4>
+			<h4 class="modal-title" id="myModalLabel"><strong>Capacitación y movilidad estudiantes</strong></h4>
 		</div>
 		<div class="modal-body">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			  	<div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
 				      <h4 class="panel-title">
-				        <a>Disponible</a>
-				        <a class="navbar-nav navbar-right" style="padding-right: 15px;">$ 20.000.000</a>
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum641 |number_format(0, ',', '.')}}</strong></a>
 				      </h4>
 				    </div>
 				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 					  <div class="panel-body">
 					    <table class="table text-center">
-							<tr style="background-color: rgb(61, 152, 59); color: white;">
+							<tr class="table-style">
 								<td><strong>Rubro de egresos</strong></td>
 								<td><strong>Presupuesto inicial</strong></td>
 								<td><strong>Reservas</strong></td>
@@ -643,21 +755,21 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>No Docente</strong></h4>
+			<h4 class="modal-title" id="myModalLabel"><strong>Capacitación y movilidad de personal no docente</strong></h4>
 		</div>
 		<div class="modal-body">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			  	<div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
 				      <h4 class="panel-title">
-				        <a>Disponible</a>
-				        <a class="navbar-nav navbar-right" style="padding-right: 15px;">$ 20.000.000</a>
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum921 |number_format(0, ',', '.')}}</strong></a>
 				      </h4>
 				    </div>
 				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 					  <div class="panel-body">
 					    <table class="table text-center">
-							<tr style="background-color: rgb(61, 152, 59); color: white;">
+							<tr class="table-style">
 								<td><strong>Rubro de egresos</strong></td>
 								<td><strong>Presupuesto inicial</strong></td>
 								<td><strong>Reservas</strong></td>
@@ -703,21 +815,21 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Editoriales</strong></h4>
+			<h4 class="modal-title" id="myModalLabel"><strong>Proyectos editoriales de la Facultad</strong></h4>
 		</div>
 		<div class="modal-body">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			  	<div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseFour" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
 				      <h4 class="panel-title">
-				        <a>Disponible</a>
-				        <a class="navbar-nav navbar-right" style="padding-right: 15px;">$ 20.000.000</a>
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum1231 |number_format(0, ',', '.')}}</strong></a>
 				      </h4>
 				    </div>
 				    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 					  <div class="panel-body">
 					    <table class="table text-center">
-					    	<tr style="background-color: rgb(61, 152, 59); color: white;">
+					    	<tr class="table-style">
 								<td><strong>Rubro de egresos</strong></td>
 								<td><strong>Presupuesto inicial</strong></td>
 								<td><strong>Reservas</strong></td>
@@ -769,21 +881,21 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Apoyo a Eventos</strong></h4>
+			<h4 class="modal-title" id="myModalLabel"><strong>Apoyo a eventos formales de la Facultad</strong></h4>
 		</div>
 		<div class="modal-body">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			  	<div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseFive" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
 				      <h4 class="panel-title">
-				        <a>Disponible</a>
-				        <a class="navbar-nav navbar-right" style="padding-right: 15px;">$ 20.000.000</a>
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum1541 |number_format(0, ',', '.')}}</strong></a>
 				      </h4>
 				    </div>
 				    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 					  <div class="panel-body">
 					    <table class="table text-center">
-							<tr style="background-color: rgb(61, 152, 59); color: white;">
+							<tr class="table-style">
 								<td><strong>Rubro de egresos</strong></td>
 								<td><strong>Presupuesto inicial</strong></td>
 								<td><strong>Reservas</strong></td>
@@ -843,21 +955,21 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Bienestar Universitario</strong></h4>
+			<h4 class="modal-title" id="myModalLabel"><strong>Apoyo a las acciones de permanencia estudiantil y bienestar universitario</strong></h4>
 		</div>
 		<div class="modal-body">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			  	<div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseSix" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
 				      <h4 class="panel-title">
-				        <a>Disponible</a>
-				        <a class="navbar-nav navbar-right" style="padding-right: 15px;">$ 20.000.000</a>
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum1831 |number_format(0, ',', '.')}}</strong></a>
 				      </h4>
 				    </div>
 				    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 					  <div class="panel-body">
 					    <table class="table text-center">
-					    	<tr style="background-color: rgb(61, 152, 59); color: white;">
+					    	<tr class="table-style">
 								<td><strong>Rubro de egresos</strong></td>
 								<td><strong>Presupuesto inicial</strong></td>
 								<td><strong>Reservas</strong></td>
@@ -909,21 +1021,21 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Extension Solidaria</strong></h4>
+			<h4 class="modal-title" id="myModalLabel"><strong>Apoyo a proyectos formales de la extensión solidaria</strong></h4>
 		</div>
 		<div class="modal-body">
 			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			  	<div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseSeven" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
 				      <h4 class="panel-title">
-				        <a>Disponible</a>
-				        <a class="navbar-nav navbar-right" style="padding-right: 15px;">$ 20.000.000</a>
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum2121 |number_format(0, ',', '.')}}</strong></a>
 				      </h4>
 				    </div>
 				    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 					  <div class="panel-body">
 					    <table class="table text-center">
-							<tr style="background-color: rgb(61, 152, 59); color: white;">
+							<tr class="table-style">
 								<td><strong>Rubro de egresos</strong></td>
 								<td><strong>Presupuesto inicial</strong></td>
 								<td><strong>Reservas</strong></td>
@@ -952,6 +1064,139 @@
 								<td><strong>{{(sum2013 + sum2023) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(sum2112 + sum2122) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(rub21 + rub22) |number_format(0, ',', '.')}}</strong></td>
+							</tr>
+						 </table>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="eiModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><strong>Apoyo a la investigación estudiantil</strong></h4>
+		</div>
+		<div class="modal-body">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseEight" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
+				      <h4 class="panel-title">
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum2421 |number_format(0, ',', '.')}}</strong></a>
+				      </h4>
+				    </div>
+				    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					  <div class="panel-body">
+					    <table class="table text-center">
+							<tr class="table-style">
+								<td><strong>Rubro de egresos</strong></td>
+								<td><strong>Presupuesto inicial</strong></td>
+								<td><strong>Reservas</strong></td>
+								<td><strong>Egresos</strong></td>
+								<td><strong>Disponibilidad</strong></td>
+							</tr>
+							<tr>
+								<td>Apoyo a Trabajos de Grado de Pregrado</td>
+								<td>{{sum2214 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2313 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2412 |number_format(0, ',', '.')}}</td>
+								<td>{{rub24 |number_format(0, ',', '.')}}</td>
+							</tr>
+							<tr>
+								<td>Apoyo a semilleros de investigación</td>
+								<td>{{sum2224 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2323 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2422 |number_format(0, ',', '.')}}</td>
+								<td>{{rub25 |number_format(0, ',', '.')}}</td>
+							</tr>
+							<tr>
+							</tr>
+							<tr>
+								<td><strong>TOTAL PROYECTO</strong></td>
+								<td><strong>{{(sum2214 + sum2224) |number_format(0, ',', '.')}}</strong></td>
+								<td><strong>{{(sum2313 + sum2323) |number_format(0, ',', '.')}}</strong></td>
+								<td><strong>{{(sum2412 + sum2422) |number_format(0, ',', '.')}}</strong></td>
+								<td><strong>{{(rub24 + rub25) |number_format(0, ',', '.')}}</strong></td>
+							</tr>
+						 </table>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="nModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><strong>Gastos de funcionamiento e inversión de la Facultad</strong></h4>
+		</div>
+		<div class="modal-body">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseNine" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
+				      <h4 class="panel-title">
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{sum2741 |number_format(0, ',', '.')}}</strong></a>
+				      </h4>
+				    </div>
+				    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					  <div class="panel-body">
+					    <table class="table text-center">
+							<tr class="table-style">
+								<td><strong>Rubro de egresos</strong></td>
+								<td><strong>Presupuesto inicial</strong></td>
+								<td><strong>Reservas</strong></td>
+								<td><strong>Egresos</strong></td>
+								<td><strong>Disponibilidad</strong></td>
+							</tr>
+							
+							<tr>
+								<td>Personal de apoyo Decanatura y departamentos</td>
+								<td>{{sum2514 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2613 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2712 |number_format(0, ',', '.')}}</td>
+								<td>{{rub26 |number_format(0, ',', '.')}}</td>
+							</tr>
+							<tr>
+								<td>Personal de apoyo CIEC</td>
+								<td>{{sum2524 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2623 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2722 |number_format(0, ',', '.')}}</td>
+								<td>{{rub27 |number_format(0, ',', '.')}}</td>
+							</tr>
+							<tr>
+								<td>Gastos de infraestructura insumos y logística</td>
+								<td>{{sum2534 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2633 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2732 |number_format(0, ',', '.')}}</td>
+								<td>{{rub28 |number_format(0, ',', '.')}}</td>
+							</tr>
+							<tr>
+								<td>Procesos de autoevaluación y acreditación</td>
+								<td>{{sum2544 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2643 |number_format(0, ',', '.')}}</td>
+								<td>{{sum2742 |number_format(0, ',', '.')}}</td>
+								<td>{{rub29 |number_format(0, ',', '.')}}</td>
+							</tr>
+							<tr>
+							</tr>
+							<tr>
+								<td><strong>TOTAL PROYECTO</strong></td>
+								<td><strong>{{(sum2514 + sum2524 + sum2534 + sum2544) |number_format(0, ',', '.')}}</strong></td>
+								<td><strong>{{(sum2613 + sum2623 + sum2633 + sum2643) |number_format(0, ',', '.')}}</strong></td>
+								<td><strong>{{(sum2712 + sum2722 + sum2732 + sum2742) |number_format(0, ',', '.')}}</strong></td>
+								<td><strong>{{(rub26 + rub27 + rub28 + rub29) |number_format(0, ',', '.')}}</strong></td>
 							</tr>
 						 </table>
 					  </div>
