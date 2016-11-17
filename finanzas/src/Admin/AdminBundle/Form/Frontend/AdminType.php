@@ -47,7 +47,11 @@ class AdminType extends AbstractType
 	public function setDefaultOptions(OptionsResolverInterface $resolver)
 	{
 		$resolver->setDefaults(array(
-		'data_class' => 'AppBundle\Entity\Usuario'
+			'data_class' => 'AppBundle\Entity\Usuario',
+			'csrf_protection' => true,
+            		'csrf_field_name' => '_token',
+			 // a unique key to help generate the secret token
+           		 'intention'       => 'task_item',
 		));
 	}
 	public function getName()
