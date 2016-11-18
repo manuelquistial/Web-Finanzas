@@ -14,558 +14,587 @@
 {% endblock %}
 
 {% block article %}
+
+
+{% set rubro = 'Rubro de Egresos' %}
+
+{% set recurso = 'Disponibilidad de Recursos' %}
+{% set totalN = 'Total de Ingresos Netos' %}
+{% set toalC = 'Total Valores Comprometidos (Res+Egr)' %}
+{% set recurD = 'Resursos Disponibles' %}
+
+{% set sum114 = 0 %} 
+{% for a114 in val14082474 %}
+    {% set sum114 = sum114 + a114.valor %}
+{% endfor %}
+
+{% set sum124 = 0 %} 
+{% for a124 in val14082484 %}
+    {% set sum124 = sum124 + a124.valor %}
+{% endfor %}
+
+{% set sum134 = 0 %} 
+{% for a134 in val14082494 %}
+    {% set sum134 = sum134 + a134.valor %}
+{% endfor %}
+
+{% set sum144 = 0 %} 
+{% for a144 in val14082504 %}
+    {% set sum144 = sum144 + a144.valor %}
+{% endfor %}
+
+
+{% set sum213 = 0 %} 
+{% for a213 in val14082473 %}
+    {% set sum213 = sum213 + a213.valor %}
+{% endfor %}
+
+{% set sum223 = 0 %} 
+{% for a223 in val14082483 %}
+    {% set sum223 = sum223 + a223.valor %}
+{% endfor %}
+
+{% set sum233 = 0 %} 
+{% for a233 in val14082493 %}
+    {% set sum233 = sum233 + a233.valor %}
+{% endfor %}
+
+{% set sum243 = 0 %} 
+{% for a243 in val14082503 %}
+    {% set sum243 = sum243 + a243.valor %}
+{% endfor %}
+
+{% set sum312 = 0 %} 
+{% for a312 in val14082472 %}
+    {% set sum312 = sum312 + a312.valor %}
+{% endfor %}
+
+{% set sum322 = 0 %} 
+{% for a322 in val14082482 %}
+    {% set sum322 = sum322 + a322.valor %}
+{% endfor %}
+
+{% set sum332 = 0 %} 
+{% for a332 in val14082492 %}
+    {% set sum332 = sum332 + a332.valor %}
+{% endfor %}
+
+{% set sum342 = 0 %} 
+{% for a342 in val14082502 %}
+    {% set sum342 = sum342 + a342.valor %}
+{% endfor %}
+
+{% set sum341 = 0 %} 
+{% for a341 in val1401 %}
+    {% set sum341 = sum341 + a341.valor %}
+{% endfor %}
+
+
+{% set rub1 = (sum114 - sum213 - sum312) %}
+{% set rub2 = (sum124 - sum223 - sum322) %}
+{% set rub3 = (sum134 - sum233 - sum332) %}
+{% set rub4 = (sum144 - sum243 - sum342) %}
+{% set inEgP140 = (sum213 + sum223 + sum233 + sum243 + sum312 + sum322 + sum332 + sum342) %}
+{% set totalP140 = sum341 -inEgP140 %}
+
+
+
+{% set sum414 = 0 %} 
+{% for a414 in val14182514 %}
+    {% set sum414 = sum414 + a414.valor %}
+{% endfor %}
+
+{% set sum424= 0 %} 
+{% for a424 in val14182524 %}
+    {% set sum424= sum424+ a424.valor %}
+{% endfor %}
+
+{% set sum434 = 0 %} 
+{% for a434 in val14182534 %}
+    {% set sum434 = sum434 + a434.valor %}
+{% endfor %}
+
+{% set sum444 = 0 %} 
+{% for a444 in val14182544 %}
+    {% set sum444 = sum444 + a444.valor %}
+{% endfor %}
+
+{% set sum513 = 0 %} 
+{% for a513 in val14182513 %}
+    {% set sum513 = sum513 + a513.valor %}
+{% endfor %}
+
+{% set sum523 = 0 %} 
+{% for a523 in val14182523 %}
+    {% set sum523 = sum523 + a523.valor %}
+{% endfor %}
+
+{% set sum533 = 0 %} 
+{% for a533 in val14182533 %}
+    {% set sum533 = sum533 + a533.valor %}
+{% endfor %}
+
+{% set sum543 = 0 %} 
+{% for a543 in val14182543 %}
+    {% set sum543 = sum543 + a543.valor %}
+{% endfor %}
+
+{% set sum612 = 0 %} 
+{% for a612 in val14182512 %}
+    {% set sum612 = sum612 + a612.valor %}
+{% endfor %}
+
+{% set sum622 = 0 %} 
+{% for a622 in val14182522 %}
+    {% set sum622 = sum622 + a622.valor %}
+{% endfor %}
+
+{% set sum632 = 0 %} 
+{% for a632 in val14182532 %}
+    {% set sum632 = sum632 + a632.valor %}
+{% endfor %}
+
+{% set sum642 = 0 %} 
+{% for a642 in val14182542 %}
+    {% set sum642 = sum642 + a642.valor %}
+{% endfor %}
+
+{% set sum641 = 0 %} 
+{% for a641 in val1411 %}
+    {% set sum641 = sum641 + a641.valor %}
+{% endfor %}
+
+
+{% set rub5 = (sum414 - sum513 - sum612) %}
+{% set rub6 = (sum424 - sum523 - sum622) %}
+{% set rub7 = (sum434 - sum533 - sum632) %}
+{% set rub8 = (sum444 - sum543 - sum642) %}
+{% set inEgP141 = (sum513 + sum523 + sum533 + sum543 + sum612 + sum622 + sum632 + sum642) %}
+{% set totalP141 = sum641 -inEgP141 %}
+
+
+
+
+{% set sum714 = 0 %} 
+{% for a714 in val14382574 %}
+    {% set sum714 = sum714 + a714.valor %}
+{% endfor %}
+
+{% set sum724= 0 %} 
+{% for a724 in val14382584 %}
+    {% set sum724= sum724+ a724.valor %}
+{% endfor %}
+
+{% set sum813 = 0 %} 
+{% for a813 in val14382573 %}
+    {% set sum813 = sum813 + a813.valor %}
+{% endfor %}
+
+{% set sum823 = 0 %} 
+{% for a823 in val14382583 %}
+    {% set sum823 = sum823 + a823.valor %}
+{% endfor %}
+
+{% set sum912 = 0 %} 
+{% for a912 in val14382572 %}
+    {% set sum912 = sum912 + a912.valor %}
+{% endfor %}
+
+{% set sum922 = 0 %} 
+{% for a922 in val14382582 %}
+    {% set sum922 = sum922 + a922.valor %}
+{% endfor %}
+
+
+{% set sum921 = 0 %} 
+{% for a921 in val1431 %}
+    {% set sum921 = sum921 + a921.valor %}
+{% endfor %}
+
+
+
+{% set rub9 = (sum714 - sum813 - sum912) %}
+{% set rub10 = (sum724 - sum823 - sum922) %}
+{% set inEgP143 = (sum813 + sum823 + sum912 + sum922) %}
+{% set totalP143 = sum921 -inEgP143 %}
+
+
+
+{% set sum1014 = 0 %} 
+{% for a1014 in val13982444 %}
+    {% set sum1014 = sum1014 + a1014.valor %}
+{% endfor %}
+
+{% set sum1024= 0 %} 
+{% for a1024 in val13982454 %}
+    {% set sum1024= sum1024+ a1024.valor %}
+{% endfor %}
+
+{% set sum1034 = 0 %} 
+{% for a1034 in val13982464 %}
+    {% set sum1034 = sum1034 + a1034.valor %}
+{% endfor %}
+
+{% set sum1113 = 0 %} 
+{% for a1113 in val13982443 %}
+    {% set sum1113 = sum1113 + a1113.valor %}
+{% endfor %}
+
+{% set sum1123 = 0 %} 
+{% for a1123 in val13982453 %}
+    {% set sum1123 = sum1123 + a1123.valor %}
+{% endfor %}
+
+{% set sum1133 = 0 %} 
+{% for a1133 in val13982463 %}
+    {% set sum1133 = sum1133 + a1133.valor %}
+{% endfor %}
+
+{% set sum1212 = 0 %} 
+{% for a1212 in val13982442 %}
+    {% set sum1212 = sum1212 + a1212.valor %}
+{% endfor %}
+
+{% set sum1222 = 0 %} 
+{% for a1222 in val13982452 %}
+    {% set sum1222 = sum1222 + a1222.valor %}
+{% endfor %}
+
+{% set sum1232 = 0 %} 
+{% for a1232 in val13982462 %}
+    {% set sum1232 = sum1232 + a1232.valor %}
+{% endfor %}
+
+{% set sum1231 = 0 %} 
+{% for a1231 in val1391 %}
+    {% set sum1231 = sum1231 + a1231.valor %}
+{% endfor %}
+
+
+{% set rub11 = (sum1014 - sum1113 - sum1212) %}
+{% set rub12 = (sum1024 - sum1123 - sum1222) %}
+{% set rub13 = (sum1034 - sum1133 - sum1232) %}
+{% set inEgP139 = (sum1113 + sum1123 + sum1133 + sum1212 + sum1222 + sum1232) %}
+{% set totalP139 = sum1231 -inEgP139 %}
+
+
+
+{% set sum1314 = 0 %} 
+{% for a1314 in val14482594 %}
+    {% set sum1314 = sum1314 + a1314.valor %}
+{% endfor %}
+
+{% set sum1324 = 0 %} 
+{% for a1324 in val14482604 %}
+    {% set sum1324 = sum1324 + a1324.valor %}
+{% endfor %}
+
+{% set sum1334 = 0 %} 
+{% for a1334 in val14482614 %}
+    {% set sum1334 = sum1334 + a1334.valor %}
+{% endfor %}
+
+{% set sum1344 = 0 %} 
+{% for a1344 in val14482624 %}
+    {% set sum1344 = sum1344 + a1344.valor %}
+{% endfor %}
+
+{% set sum1413 = 0 %} 
+{% for a1413 in val14482593 %}
+    {% set sum1413 = sum1413 + a1413.valor %}
+{% endfor %}
+
+{% set sum1423 = 0 %} 
+{% for a1423 in val14482603 %}
+    {% set sum1423 = sum1423 + a1423.valor %}
+{% endfor %}
+
+{% set sum1433 = 0 %} 
+{% for a1433 in val14482613 %}
+    {% set sum1433 = sum1433 + a1433.valor %}
+{% endfor %}
+
+{% set sum1443 = 0 %} 
+{% for a1443 in val14482623 %}
+    {% set sum1443 = sum1443 + a1443.valor %}
+{% endfor %}
+
+{% set sum1512 = 0 %} 
+{% for a1512 in val14482592 %}
+    {% set sum1512 = sum1512 + a1512.valor %}
+{% endfor %}
+
+{% set sum1522 = 0 %} 
+{% for a1522 in val14482602 %}
+    {% set sum1522 = sum1522 + a1522.valor %}
+{% endfor %}
+
+{% set sum1532 = 0 %} 
+{% for a1532 in val14482612 %}
+    {% set sum1532 = sum1532 + a1532.valor %}
+{% endfor %}
+
+{% set sum1542 = 0 %} 
+{% for a1542 in val14482622 %}
+    {% set sum1542 = sum1542 + a1542.valor %}
+{% endfor %}
+
+{% set sum1541 = 0 %} 
+{% for a1541 in val1441 %}
+    {% set sum1541 = sum1541 + a1541.valor %}
+{% endfor %}
+
+
+
+{% set rub14 = (sum1314 - sum1413 - sum1512) %}
+{% set rub15 = (sum1324 - sum1423 - sum1522) %}
+{% set rub16 = (sum1334 - sum1433 - sum1532) %}
+{% set rub17 = (sum1344 - sum1443 - sum1542) %}
+{% set inEgP144 = (sum1413 + sum1423 + sum1433 + sum1443 + sum1512 + sum1522 + sum1532 + sum1542) %}
+{% set totalP144 = sum1541 -inEgP144 %}
+
+
+
+{% set sum1614 = 0 %} 
+{% for a1614 in val13882234 %}
+    {% set sum1614 = sum1614 + a1614.valor %}
+{% endfor %}
+
+{% set sum1624= 0 %} 
+{% for a1624 in val13882244 %}
+    {% set sum1624= sum1624+ a1624.valor %}
+{% endfor %}
+
+{% set sum1634 = 0 %} 
+{% for a1634 in val13882254 %}
+    {% set sum1634 = sum1634 + a1634.valor %}
+{% endfor %}
+
+{% set sum1713 = 0 %} 
+{% for a1713 in val13882233 %}
+    {% set sum1713 = sum1713 + a1713.valor %}
+{% endfor %}
+
+{% set sum1723 = 0 %} 
+{% for a1723 in val13882243 %}
+    {% set sum1723 = sum1723 + a1723.valor %}
+{% endfor %}
+
+{% set sum1733 = 0 %} 
+{% for a1733 in val13882253 %}
+    {% set sum1733 = sum1733 + a1733.valor %}
+{% endfor %}
+
+{% set sum1812 = 0 %} 
+{% for a1812 in val13882232 %}
+    {% set sum1812 = sum1812 + a1812.valor %}
+{% endfor %}
+
+{% set sum1822 = 0 %} 
+{% for a1822 in val13882242 %}
+    {% set sum1822 = sum1822 + a1822.valor %}
+{% endfor %}
+
+{% set sum1832 = 0 %} 
+{% for a1832 in val13882252 %}
+    {% set sum1832 = sum1832 + a1832.valor %}
+{% endfor %}
+
+{% set sum1831 = 0 %} 
+{% for a1831 in val1381 %}
+    {% set sum1831 = sum1831 + a1831.valor %}
+{% endfor %}
+
+
+{% set rub18 = (sum1614 - sum1713 - sum1812) %}
+{% set rub19 = (sum1624 - sum1723 - sum1822) %}
+{% set rub20 = (sum1634 - sum1733 - sum1832) %}
+{% set inEgP138 = (sum1713 + sum1723 + sum1733 + sum1812 + sum1822 + sum1832) %}
+{% set totalP138 = sum1831 -inEgP138 %}
+
+
+
+
+{% set sum1914 = 0 %} 
+{% for a1914 in val14582634 %}
+    {% set sum1914 = sum1914 + a1914.valor %}
+{% endfor %}
+
+{% set sum1924= 0 %} 
+{% for a1924 in val14582644 %}
+    {% set sum1924= sum1924+ a1924.valor %}
+{% endfor %}
+
+{% set sum2013 = 0 %} 
+{% for a2013 in val14582633 %}
+    {% set sum2013 = sum2013 + a2013.valor %}
+{% endfor %}
+
+{% set sum2023 = 0 %} 
+{% for a2023 in val14582643 %}
+    {% set sum2023 = sum2023 + a2023.valor %}
+{% endfor %}
+
+{% set sum2112 = 0 %} 
+{% for a2112 in val14582632 %}
+    {% set sum2112 = sum2112 + a2112.valor %}
+{% endfor %}
+
+{% set sum2122 = 0 %} 
+{% for a2122 in val14582642 %}
+    {% set sum2122 = sum2122 + a2122.valor %}
+{% endfor %}
+
+{% set sum2121 = 0 %} 
+{% for a2121 in val1451 %}
+    {% set sum2121 = sum2121 + a2121.valor %}
+{% endfor %}
+
+
+
+{% set rub21 = (sum1914 - sum2013 - sum2112) %}
+{% set rub22 = (sum1924 - sum2023 - sum2122) %}
+{% set inEgP145 = (sum2013 + sum2023 + sum2112 + sum2122) %}
+{% set totalP145 = sum2121 -inEgP145 %}
+
+
+
+
+{% set sum2214 = 0 %} 
+{% for a2214 in val14282554 %}
+    {% set sum2214 = sum2214 + a2214.valor %}
+{% endfor %}
+
+{% set sum2224= 0 %} 
+{% for a2224 in val14282564 %}
+    {% set sum2224= sum2224+ a2224.valor %}
+{% endfor %}
+
+{% set sum2313 = 0 %} 
+{% for a2313 in val14282553 %}
+    {% set sum2313 = sum2313 + a2313.valor %}
+{% endfor %}
+
+{% set sum2323 = 0 %} 
+{% for a2323 in val14282563 %}
+    {% set sum2323 = sum2323 + a2323.valor %}
+{% endfor %}
+
+{% set sum2412 = 0 %} 
+{% for a2412 in val14282552 %}
+    {% set sum2412 = sum2412 + a2412.valor %}
+{% endfor %}
+
+{% set sum2422 = 0 %} 
+{% for a2422 in val14282562 %}
+    {% set sum2422 = sum2422 + a2422.valor %}
+{% endfor %}
+
+{% set sum2421 = 0 %} 
+{% for a2421 in val1421%}
+    {% set sum2421 = sum2421 + a2421.valor %}
+{% endfor %}
+
+
+
+{% set rub24 = (sum2214 - sum2313 - sum2412) %}
+{% set rub25 = (sum2224 - sum2323 - sum2422) %}
+{% set inEgP142 = (sum2313 + sum2323 + sum2412 + sum2422) %}
+{% set totalP142 = sum2421 -inEgP142 %}
+
+
+{% set sum2514 = 0 %} 
+{% for a2514 in val3982774 %}
+    {% set sum2514 = sum2514 + a2514.valor %}
+{% endfor %}
+
+{% set sum2524= 0 %} 
+{% for a2524 in val3982784 %}
+    {% set sum2524= sum2524+ a2524.valor %}
+{% endfor %}
+
+{% set sum2534 = 0 %} 
+{% for a2534 in val3982794 %}
+    {% set sum2534 = sum2534 + a2534.valor %}
+{% endfor %}
+
+{% set sum2544 = 0 %} 
+{% for a2544 in val3982804 %}
+    {% set sum2544 = sum2544 + a2544.valor %}
+{% endfor %}
+
+{% set sum2613 = 0 %} 
+{% for a2613 in val3982773 %}
+    {% set sum2613 = sum2613 + a2613.valor %}
+{% endfor %}
+
+{% set sum2623 = 0 %} 
+{% for a2623 in val3982783 %}
+    {% set sum2623 = sum2623 + a2623.valor %}
+{% endfor %}
+
+{% set sum2633 = 0 %} 
+{% for a2633 in val3982793 %}
+    {% set sum2633 = sum2633 + a2633.valor %}
+{% endfor %}
+
+{% set sum2643 = 0 %} 
+{% for a2643 in val3982803 %}
+    {% set sum2643 = sum2643 + a2643.valor %}
+{% endfor %}
+
+{% set sum2712 = 0 %} 
+{% for a2712 in val3982772 %}
+    {% set sum2712 = sum2712 + a2712.valor %}
+{% endfor %}
+
+{% set sum2722 = 0 %} 
+{% for a2722 in val3982782 %}
+    {% set sum2722 = sum2722 + a2722.valor %}
+{% endfor %}
+
+{% set sum2732 = 0 %} 
+{% for a2732 in val3982792 %}
+    {% set sum2732 = sum2732 + a2732.valor %}
+{% endfor %}
+
+{% set sum2742 = 0 %} 
+{% for a2742 in val3982802 %}
+    {% set sum2742 = sum2742 + a2742.valor %}
+{% endfor %}
+
+{% set sum2741 = 0 %} 
+{% for a2741 in val391 %}
+    {% set sum2741 = sum2741 + a2741.valor %}
+{% endfor %}
+
+
+{% set rub26 = (sum2514 - sum2613 - sum2712) %}
+{% set rub27 = (sum2524 - sum2623 - sum2722) %}
+{% set rub28 = (sum2534 - sum2633 - sum2732) %}
+{% set rub29 = (sum2544 - sum2643 - sum2742) %}
+{% set inEgP39 = (sum2613 + sum2623 + sum2633 + sum2643 + sum2712 + sum2722 + sum2732 + sum2742) %}
+{% set totalP39 = sum2741 -inEgP39 %}
+
+
 <div class="container">
 	<div class="row">
+		<div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a><strong>HOLA2</strong></a>
+		        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>$ {{(totalP39 + totalP142 + totalP145 + totalP138 + totalP144 + totalP139 + totalP143 + totalP140 + totalP141) |number_format(0, ',', '.')}}</strong></a>
+		      </h4>
+		    </div>
+		</div>
 		<div class="container">
 
-			{% set rubro = 'Rubro de Egresos' %}
-
-			{% set recurso = 'Disponibilidad de Recursos' %}
-			{% set totalN = 'Total de Ingresos Netos' %}
-			{% set toalC = 'Total Valores Comprometidos (Res+Egr)' %}
-			{% set recurD = 'Resursos Disponibles' %}
-
-			{% set sum114 = 0 %} 
-			{% for a114 in val14082474 %}
-			    {% set sum114 = sum114 + a114.valor %}
-			{% endfor %}
-
-			{% set sum124 = 0 %} 
-			{% for a124 in val14082484 %}
-			    {% set sum124 = sum124 + a124.valor %}
-			{% endfor %}
-
-			{% set sum134 = 0 %} 
-			{% for a134 in val14082494 %}
-			    {% set sum134 = sum134 + a134.valor %}
-			{% endfor %}
-
-			{% set sum144 = 0 %} 
-			{% for a144 in val14082504 %}
-			    {% set sum144 = sum144 + a144.valor %}
-			{% endfor %}
-
-
-			{% set sum213 = 0 %} 
-			{% for a213 in val14082473 %}
-			    {% set sum213 = sum213 + a213.valor %}
-			{% endfor %}
-
-			{% set sum223 = 0 %} 
-			{% for a223 in val14082483 %}
-			    {% set sum223 = sum223 + a223.valor %}
-			{% endfor %}
-
-			{% set sum233 = 0 %} 
-			{% for a233 in val14082493 %}
-			    {% set sum233 = sum233 + a233.valor %}
-			{% endfor %}
-
-			{% set sum243 = 0 %} 
-			{% for a243 in val14082503 %}
-			    {% set sum243 = sum243 + a243.valor %}
-			{% endfor %}
-
-			{% set sum312 = 0 %} 
-			{% for a312 in val14082472 %}
-			    {% set sum312 = sum312 + a312.valor %}
-			{% endfor %}
-
-			{% set sum322 = 0 %} 
-			{% for a322 in val14082482 %}
-			    {% set sum322 = sum322 + a322.valor %}
-			{% endfor %}
-
-			{% set sum332 = 0 %} 
-			{% for a332 in val14082492 %}
-			    {% set sum332 = sum332 + a332.valor %}
-			{% endfor %}
-
-			{% set sum342 = 0 %} 
-			{% for a342 in val14082502 %}
-			    {% set sum342 = sum342 + a342.valor %}
-			{% endfor %}
-
-			{% set sum341 = 0 %} 
-			{% for a341 in val1401 %}
-			    {% set sum341 = sum341 + a341.valor %}
-			{% endfor %}
-
-
-			{% set rub1 = (sum114 - sum213 - sum312) %}
-			{% set rub2 = (sum124 - sum223 - sum322) %}
-			{% set rub3 = (sum134 - sum233 - sum332) %}
-			{% set rub4 = (sum144 - sum243 - sum342) %}
-
-
-
-			{% set sum414 = 0 %} 
-			{% for a414 in val14182514 %}
-			    {% set sum414 = sum414 + a414.valor %}
-			{% endfor %}
-
-			{% set sum424= 0 %} 
-			{% for a424 in val14182524 %}
-			    {% set sum424= sum424+ a424.valor %}
-			{% endfor %}
-
-			{% set sum434 = 0 %} 
-			{% for a434 in val14182534 %}
-			    {% set sum434 = sum434 + a434.valor %}
-			{% endfor %}
-
-			{% set sum444 = 0 %} 
-			{% for a444 in val14182544 %}
-			    {% set sum444 = sum444 + a444.valor %}
-			{% endfor %}
-
-			{% set sum513 = 0 %} 
-			{% for a513 in val14182513 %}
-			    {% set sum513 = sum513 + a513.valor %}
-			{% endfor %}
-
-			{% set sum523 = 0 %} 
-			{% for a523 in val14182523 %}
-			    {% set sum523 = sum523 + a523.valor %}
-			{% endfor %}
-
-			{% set sum533 = 0 %} 
-			{% for a533 in val14182533 %}
-			    {% set sum533 = sum533 + a533.valor %}
-			{% endfor %}
-
-			{% set sum543 = 0 %} 
-			{% for a543 in val14182543 %}
-			    {% set sum543 = sum543 + a543.valor %}
-			{% endfor %}
-
-			{% set sum612 = 0 %} 
-			{% for a612 in val14182512 %}
-			    {% set sum612 = sum612 + a612.valor %}
-			{% endfor %}
-
-			{% set sum622 = 0 %} 
-			{% for a622 in val14182522 %}
-			    {% set sum622 = sum622 + a622.valor %}
-			{% endfor %}
-
-			{% set sum632 = 0 %} 
-			{% for a632 in val14182532 %}
-			    {% set sum632 = sum632 + a632.valor %}
-			{% endfor %}
-
-			{% set sum642 = 0 %} 
-			{% for a642 in val14182542 %}
-			    {% set sum642 = sum642 + a642.valor %}
-			{% endfor %}
-
-			{% set sum641 = 0 %} 
-			{% for a641 in val1411 %}
-			    {% set sum641 = sum641 + a641.valor %}
-			{% endfor %}
-
-
-			{% set rub5 = (sum414 - sum513 - sum612) %}
-			{% set rub6 = (sum424 - sum523 - sum622) %}
-			{% set rub7 = (sum434 - sum533 - sum632) %}
-			{% set rub8 = (sum444 - sum543 - sum642) %}
-
-
-
-
-			{% set sum714 = 0 %} 
-			{% for a714 in val14382574 %}
-			    {% set sum714 = sum714 + a714.valor %}
-			{% endfor %}
-
-			{% set sum724= 0 %} 
-			{% for a724 in val14382584 %}
-			    {% set sum724= sum724+ a724.valor %}
-			{% endfor %}
-
-			{% set sum813 = 0 %} 
-			{% for a813 in val14382573 %}
-			    {% set sum813 = sum813 + a813.valor %}
-			{% endfor %}
-
-			{% set sum823 = 0 %} 
-			{% for a823 in val14382583 %}
-			    {% set sum823 = sum823 + a823.valor %}
-			{% endfor %}
-
-			{% set sum912 = 0 %} 
-			{% for a912 in val14382572 %}
-			    {% set sum912 = sum912 + a912.valor %}
-			{% endfor %}
-
-			{% set sum922 = 0 %} 
-			{% for a922 in val14382582 %}
-			    {% set sum922 = sum922 + a922.valor %}
-			{% endfor %}
-
-
-			{% set sum921 = 0 %} 
-			{% for a921 in val1431 %}
-			    {% set sum921 = sum921 + a921.valor %}
-			{% endfor %}
-
-
-			
-			{% set rub9 = (sum714 - sum813 - sum912) %}
-			{% set rub10 = (sum724 - sum823 - sum922) %}
-
-
-
-			{% set sum1014 = 0 %} 
-			{% for a1014 in val13982444 %}
-			    {% set sum1014 = sum1014 + a1014.valor %}
-			{% endfor %}
-
-			{% set sum1024= 0 %} 
-			{% for a1024 in val13982454 %}
-			    {% set sum1024= sum1024+ a1024.valor %}
-			{% endfor %}
-
-			{% set sum1034 = 0 %} 
-			{% for a1034 in val13982464 %}
-			    {% set sum1034 = sum1034 + a1034.valor %}
-			{% endfor %}
-
-			{% set sum1113 = 0 %} 
-			{% for a1113 in val13982443 %}
-			    {% set sum1113 = sum1113 + a1113.valor %}
-			{% endfor %}
-
-			{% set sum1123 = 0 %} 
-			{% for a1123 in val13982453 %}
-			    {% set sum1123 = sum1123 + a1123.valor %}
-			{% endfor %}
-
-			{% set sum1133 = 0 %} 
-			{% for a1133 in val13982463 %}
-			    {% set sum1133 = sum1133 + a1133.valor %}
-			{% endfor %}
-
-			{% set sum1212 = 0 %} 
-			{% for a1212 in val13982442 %}
-			    {% set sum1212 = sum1212 + a1212.valor %}
-			{% endfor %}
-
-			{% set sum1222 = 0 %} 
-			{% for a1222 in val13982452 %}
-			    {% set sum1222 = sum1222 + a1222.valor %}
-			{% endfor %}
-
-			{% set sum1232 = 0 %} 
-			{% for a1232 in val13982462 %}
-			    {% set sum1232 = sum1232 + a1232.valor %}
-			{% endfor %}
-
-			{% set sum1231 = 0 %} 
-			{% for a1231 in val1391 %}
-			    {% set sum1231 = sum1231 + a1231.valor %}
-			{% endfor %}
-
-
-			{% set rub11 = (sum1014 - sum1113 - sum1212) %}
-			{% set rub12 = (sum1024 - sum1123 - sum1222) %}
-			{% set rub13 = (sum1034 - sum1133 - sum1232) %}
-			
-
-
-			{% set sum1314 = 0 %} 
-			{% for a1314 in val14482594 %}
-			    {% set sum1314 = sum1314 + a1314.valor %}
-			{% endfor %}
-
-			{% set sum1324 = 0 %} 
-			{% for a1324 in val14482604 %}
-			    {% set sum1324 = sum1324 + a1324.valor %}
-			{% endfor %}
-
-			{% set sum1334 = 0 %} 
-			{% for a1334 in val14482614 %}
-			    {% set sum1334 = sum1334 + a1334.valor %}
-			{% endfor %}
-
-			{% set sum1344 = 0 %} 
-			{% for a1344 in val14482624 %}
-			    {% set sum1344 = sum1344 + a1344.valor %}
-			{% endfor %}
-
-			{% set sum1413 = 0 %} 
-			{% for a1413 in val14482593 %}
-			    {% set sum1413 = sum1413 + a1413.valor %}
-			{% endfor %}
-
-			{% set sum1423 = 0 %} 
-			{% for a1423 in val14482603 %}
-			    {% set sum1423 = sum1423 + a1423.valor %}
-			{% endfor %}
-
-			{% set sum1433 = 0 %} 
-			{% for a1433 in val14482613 %}
-			    {% set sum1433 = sum1433 + a1433.valor %}
-			{% endfor %}
-
-			{% set sum1443 = 0 %} 
-			{% for a1443 in val14482623 %}
-			    {% set sum1443 = sum1443 + a1443.valor %}
-			{% endfor %}
-
-			{% set sum1512 = 0 %} 
-			{% for a1512 in val14482592 %}
-			    {% set sum1512 = sum1512 + a1512.valor %}
-			{% endfor %}
-
-			{% set sum1522 = 0 %} 
-			{% for a1522 in val14482602 %}
-			    {% set sum1522 = sum1522 + a1522.valor %}
-			{% endfor %}
-
-			{% set sum1532 = 0 %} 
-			{% for a1532 in val14482612 %}
-			    {% set sum1532 = sum1532 + a1532.valor %}
-			{% endfor %}
-
-			{% set sum1542 = 0 %} 
-			{% for a1542 in val14482622 %}
-			    {% set sum1542 = sum1542 + a1542.valor %}
-			{% endfor %}
-
-			{% set sum1541 = 0 %} 
-			{% for a1541 in val1441 %}
-			    {% set sum1541 = sum1541 + a1541.valor %}
-			{% endfor %}
-
-
-
-			{% set rub14 = (sum1314 - sum1413 - sum1512) %}
-			{% set rub15 = (sum1324 - sum1423 - sum1522) %}
-			{% set rub16 = (sum1334 - sum1433 - sum1532) %}
-			{% set rub17 = (sum1344 - sum1443 - sum1542) %}
-
-
-
-			{% set sum1614 = 0 %} 
-			{% for a1614 in val13882234 %}
-			    {% set sum1614 = sum1614 + a1614.valor %}
-			{% endfor %}
-
-			{% set sum1624= 0 %} 
-			{% for a1624 in val13882244 %}
-			    {% set sum1624= sum1624+ a1624.valor %}
-			{% endfor %}
-
-			{% set sum1634 = 0 %} 
-			{% for a1634 in val13882254 %}
-			    {% set sum1634 = sum1634 + a1634.valor %}
-			{% endfor %}
-
-			{% set sum1713 = 0 %} 
-			{% for a1713 in val13882233 %}
-			    {% set sum1713 = sum1713 + a1713.valor %}
-			{% endfor %}
-
-			{% set sum1723 = 0 %} 
-			{% for a1723 in val13882243 %}
-			    {% set sum1723 = sum1723 + a1723.valor %}
-			{% endfor %}
-
-			{% set sum1733 = 0 %} 
-			{% for a1733 in val13882253 %}
-			    {% set sum1733 = sum1733 + a1733.valor %}
-			{% endfor %}
-
-			{% set sum1812 = 0 %} 
-			{% for a1812 in val13882232 %}
-			    {% set sum1812 = sum1812 + a1812.valor %}
-			{% endfor %}
-
-			{% set sum1822 = 0 %} 
-			{% for a1822 in val13882242 %}
-			    {% set sum1822 = sum1822 + a1822.valor %}
-			{% endfor %}
-
-			{% set sum1832 = 0 %} 
-			{% for a1832 in val13882252 %}
-			    {% set sum1832 = sum1832 + a1832.valor %}
-			{% endfor %}
-
-			{% set sum1831 = 0 %} 
-			{% for a1831 in val1381 %}
-			    {% set sum1831 = sum1831 + a1831.valor %}
-			{% endfor %}
-
-
-			{% set rub18 = (sum1614 - sum1713 - sum1812) %}
-			{% set rub19 = (sum1624 - sum1723 - sum1822) %}
-			{% set rub20 = (sum1634 - sum1733 - sum1832) %}
-
-
-
-
-			{% set sum1914 = 0 %} 
-			{% for a1914 in val14582634 %}
-			    {% set sum1914 = sum1914 + a1914.valor %}
-			{% endfor %}
-
-			{% set sum1924= 0 %} 
-			{% for a1924 in val14582644 %}
-			    {% set sum1924= sum1924+ a1924.valor %}
-			{% endfor %}
-
-			{% set sum2013 = 0 %} 
-			{% for a2013 in val14582633 %}
-			    {% set sum2013 = sum2013 + a2013.valor %}
-			{% endfor %}
-
-			{% set sum2023 = 0 %} 
-			{% for a2023 in val14582643 %}
-			    {% set sum2023 = sum2023 + a2023.valor %}
-			{% endfor %}
-
-			{% set sum2112 = 0 %} 
-			{% for a2112 in val14582632 %}
-			    {% set sum2112 = sum2112 + a2112.valor %}
-			{% endfor %}
-
-			{% set sum2122 = 0 %} 
-			{% for a2122 in val14582642 %}
-			    {% set sum2122 = sum2122 + a2122.valor %}
-			{% endfor %}
-
-			{% set sum2121 = 0 %} 
-			{% for a2121 in val1451 %}
-			    {% set sum2121 = sum2121 + a2121.valor %}
-			{% endfor %}
-
-
-			
-			{% set rub21 = (sum1914 - sum2013 - sum2112) %}
-			{% set rub22 = (sum1924 - sum2023 - sum2122) %}
-
-
-
-
-			{% set sum2214 = 0 %} 
-			{% for a2214 in val14282554 %}
-			    {% set sum2214 = sum2214 + a2214.valor %}
-			{% endfor %}
-
-			{% set sum2224= 0 %} 
-			{% for a2224 in val14282564 %}
-			    {% set sum2224= sum2224+ a2224.valor %}
-			{% endfor %}
-
-			{% set sum2313 = 0 %} 
-			{% for a2313 in val14282553 %}
-			    {% set sum2313 = sum2313 + a2313.valor %}
-			{% endfor %}
-
-			{% set sum2323 = 0 %} 
-			{% for a2323 in val14282563 %}
-			    {% set sum2323 = sum2323 + a2323.valor %}
-			{% endfor %}
-
-			{% set sum2412 = 0 %} 
-			{% for a2412 in val14282552 %}
-			    {% set sum2412 = sum2412 + a2412.valor %}
-			{% endfor %}
-
-			{% set sum2422 = 0 %} 
-			{% for a2422 in val14282562 %}
-			    {% set sum2422 = sum2422 + a2422.valor %}
-			{% endfor %}
-
-			{% set sum2421 = 0 %} 
-			{% for a2421 in val1421%}
-			    {% set sum2421 = sum2421 + a2421.valor %}
-			{% endfor %}
-
-
-			
-			{% set rub24 = (sum2214 - sum2313 - sum2412) %}
-			{% set rub25 = (sum2224 - sum2323 - sum2422) %}
-
-
-			{% set sum2514 = 0 %} 
-			{% for a2514 in val3982774 %}
-			    {% set sum2514 = sum2514 + a2514.valor %}
-			{% endfor %}
-
-			{% set sum2524= 0 %} 
-			{% for a2524 in val3982784 %}
-			    {% set sum2524= sum2524+ a2524.valor %}
-			{% endfor %}
-
-			{% set sum2534 = 0 %} 
-			{% for a2534 in val3982794 %}
-			    {% set sum2534 = sum2534 + a2534.valor %}
-			{% endfor %}
-
-			{% set sum2544 = 0 %} 
-			{% for a2544 in val3982804 %}
-			    {% set sum2544 = sum2544 + a2544.valor %}
-			{% endfor %}
-
-			{% set sum2613 = 0 %} 
-			{% for a2613 in val3982773 %}
-			    {% set sum2613 = sum2613 + a2613.valor %}
-			{% endfor %}
-
-			{% set sum2623 = 0 %} 
-			{% for a2623 in val3982783 %}
-			    {% set sum2623 = sum2623 + a2623.valor %}
-			{% endfor %}
-
-			{% set sum2633 = 0 %} 
-			{% for a2633 in val3982793 %}
-			    {% set sum2633 = sum2633 + a2633.valor %}
-			{% endfor %}
-
-			{% set sum2643 = 0 %} 
-			{% for a2643 in val3982803 %}
-			    {% set sum2643 = sum2643 + a2643.valor %}
-			{% endfor %}
-
-			{% set sum2712 = 0 %} 
-			{% for a2712 in val3982772 %}
-			    {% set sum2712 = sum2712 + a2712.valor %}
-			{% endfor %}
-
-			{% set sum2722 = 0 %} 
-			{% for a2722 in val3982782 %}
-			    {% set sum2722 = sum2722 + a2722.valor %}
-			{% endfor %}
-
-			{% set sum2732 = 0 %} 
-			{% for a2732 in val3982792 %}
-			    {% set sum2732 = sum2732 + a2732.valor %}
-			{% endfor %}
-
-			{% set sum2742 = 0 %} 
-			{% for a2742 in val3982802 %}
-			    {% set sum2742 = sum2742 + a2742.valor %}
-			{% endfor %}
-
-			{% set sum2741 = 0 %} 
-			{% for a2741 in val391 %}
-			    {% set sum2741 = sum2741 + a2741.valor %}
-			{% endfor %}
-
-
-			{% set rub26 = (sum2514 - sum2613 - sum2712) %}
-			{% set rub27 = (sum2524 - sum2623 - sum2722) %}
-			{% set rub28 = (sum2534 - sum2633 - sum2732) %}
-			{% set rub29 = (sum2544 - sum2643 - sum2742) %}
-
-			
 			{% set boxTitle = ['Gastos e Ingresos', 'Apoyo a Eventos', 'Editoriales', 'Docentes', 'Estudiantes', 'Investigacion', 'No Docente', 'Bienestar Estudiantil', 'Extension', ''] %}
+			{%	set modalID = ['#nModal','#fiModal','#foModal','#fModal','#sModal','#eiModal','#tModal','#siModal','#seModal','']%}
 
 			{% for box in range(0, (boxTitle|length)-1)%}
 				<div class="col-xs-3 col-md-2">
-					<a id="box-finanzas" href="#" class="thumbnail" data-target="#nModal" data-toggle="modal">
+					<a id="box-finanzas" href="#" class="thumbnail" data-target="{{modalID[box]}}" data-toggle="modal">
 						<img src="{{ asset('assets/vendor/img/png/imgBox'~box~'.png') }}" alt="Gastos e Inversion">
 						
 					</a>
@@ -650,21 +679,19 @@
 								<td><strong>{{ recurso }}</strong></td>
 								<td></td>
 							</tr>
-							
 							<tr>
-								<td>Apoyo a movilidad nacional Comunicacion Social</td>
-								<td>{{sum114 |number_format(0, ',', '.')}}</td>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum341 |number_format(0, ',', '.')}}</td>
 
 							</tr>
 							<tr>
-								<td>Apoyo a movilidad internacional Comunicacion Social</td>
-								<td>{{sum124 |number_format(0, ',', '.')}}</td>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP140 |number_format(0, ',', '.')}}</td>
 
 							</tr>
 							<tr>
-								<td>Apoyo a movilidad nacional Linguistica y Literatura</td>
-								<td>{{sum134 |number_format(0, ',', '.')}}</td>
-
+								<td>Recursos Disponibles</td>
+								<td>{{totalP140 |number_format(0, ',', '.')}}</td>
 							</tr>
 						 </table>
 					  </div>
@@ -742,6 +769,28 @@
 							</tr>
 						 </table>
 					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum641 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP141 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP141 |number_format(0, ',', '.')}}</td>
+							</tr>
+						 </table>
+					  </div>
 					</div>
 				</div>
 			</div>
@@ -798,6 +847,28 @@
 								<td><strong>{{(sum813 + sum823) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(sum912 + sum922) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(rub9 + rub10) |number_format(0, ',', '.')}}</strong></td>
+							</tr>
+						 </table>
+					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum921 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP143 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP143 |number_format(0, ',', '.')}}</td>
 							</tr>
 						 </table>
 					  </div>
@@ -865,6 +936,28 @@
 								<td><strong>{{(sum1113 + sum1123 + sum1133) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(sum1212 + sum1222 + sum1232) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(rub11 + rub12 + rub13) |number_format(0, ',', '.')}}</strong></td>
+							</tr>
+						 </table>
+					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum1231 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP139 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP139 |number_format(0, ',', '.')}}</td>
 							</tr>
 						 </table>
 					  </div>
@@ -942,6 +1035,28 @@
 							</tr>
 						 </table>
 					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum1541 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP144 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP144 |number_format(0, ',', '.')}}</td>
+							</tr>
+						 </table>
+					  </div>
 					</div>
 				</div>
 			</div>
@@ -1008,6 +1123,28 @@
 							</tr>
 						 </table>
 					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum1831 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP138 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP138 |number_format(0, ',', '.')}}</td>
+							</tr>
+						 </table>
+					  </div>
 					</div>
 				</div>
 			</div>
@@ -1067,6 +1204,28 @@
 							</tr>
 						 </table>
 					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum2121 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP145 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP145 |number_format(0, ',', '.')}}</td>
+							</tr>
+						 </table>
+					  </div>
 					</div>
 				</div>
 			</div>
@@ -1123,6 +1282,28 @@
 								<td><strong>{{(sum2313 + sum2323) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(sum2412 + sum2422) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(rub24 + rub25) |number_format(0, ',', '.')}}</strong></td>
+							</tr>
+						 </table>
+					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum2421 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP142 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP142 |number_format(0, ',', '.')}}</td>
 							</tr>
 						 </table>
 					  </div>
@@ -1197,6 +1378,28 @@
 								<td><strong>{{(sum2613 + sum2623 + sum2633 + sum2643) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(sum2712 + sum2722 + sum2732 + sum2742) |number_format(0, ',', '.')}}</strong></td>
 								<td><strong>{{(rub26 + rub27 + rub28 + rub29) |number_format(0, ',', '.')}}</strong></td>
+							</tr>
+						 </table>
+					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>{{ recurso }}</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td>{{sum2741 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td>{{inEgP39 |number_format(0, ',', '.')}}</td>
+
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td>{{totalP39 |number_format(0, ',', '.')}}</td>
 							</tr>
 						 </table>
 					  </div>
