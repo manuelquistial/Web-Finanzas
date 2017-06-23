@@ -1,0 +1,65 @@
+{% extends '::admin.html.twig' %}
+
+{% block navLi %}
+	<ul class="nav navbar-nav">
+		<li role="navigation" ><a href="{{ path('admin_usuarios') }}">Lista Usuarios</a></li>
+		<li role="navigation" class="active"><a href="{{ path('admin_registro') }}">Registro Usuarios</a></li>
+	</ul>
+{% endblock %}
+
+
+{% block article %}
+	<div id="content" class="col-sm-5 col-md-4 col-centered">
+		<h2>Registro de Usuarios</h2>
+		<form action="{{ path('admin_registro') }}" method="POST">
+			{{ form_errors(formulario) }}
+			<legend>Datos personales</legend>
+			<div class="row">
+				<div class="col-xs-6 col-md-6">
+					<div class="form-group">
+						{{ form_widget(formulario.nombre, { 'attr': {'placeholder': 'Nombre'} }) }}
+						<span>{{ form_errors(formulario.nombre) }}</span>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-6">
+					<div class="form-group">
+						{{ form_widget(formulario.apellidos, { 'attr': {'placeholder': 'Apellidos'} }) }}
+						<span>{{ form_errors(formulario.apellidos) }}</span>
+					</div>
+				</div>
+			</div>	
+			<div class="form-group">
+				{{ form_widget(formulario.email, { 'attr': {'placeholder': 'Email'} }) }}
+				<span>{{ form_errors(formulario.email) }}</span>
+			</div>
+			
+			</fieldset>
+			<fieldset>
+			<legend>Datos de acceso</legend>
+			<div class="form-group">
+				{{ form_widget(formulario.usuario, { 'attr': {'placeholder': 'Usuario'} }) }}
+				<span>{{ form_errors(formulario.usuario) }}</span>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-md-6">
+					<div class="form-group">
+						{{ form_widget(formulario.password, { 'attr': {'placeholder': 'Password'} }) }}
+						<span>{{ form_errors(formulario.password) }}</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Administrador:&nbsp;</label>
+				{{ form_label(formulario.adminC.0) }}
+				<span>{{ form_widget(formulario.adminC.0) }}</span>&nbsp;
+				<span>{{ form_errors(formulario.adminC.0) }}</span>
+				{{ form_label(formulario.adminC.1) }}
+				<span>{{ form_widget(formulario.adminC.1) }}</span>
+				<span>{{ form_errors(formulario.adminC.1) }}</span>
+			</div>
+			</fieldset>
+			{{ form_rest(formulario) }}
+			<button class="btn btn-default" type="submit">Registrar</button>
+		</form>
+	</div>
+{% endblock %}

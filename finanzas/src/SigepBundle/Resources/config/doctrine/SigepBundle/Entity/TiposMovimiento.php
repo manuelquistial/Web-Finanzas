@@ -34,7 +34,5 @@ class TiposMovimiento
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $codigo;
-
-
 }
 

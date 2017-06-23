@@ -6,7 +6,6 @@
       <index name="CentroCosto" columns="CentroCosto"/>
       <index name="Proyecto" columns="Proyecto"/>
       <index name="Tipo" columns="Tipo"/>
-      <index name="persona" columns="persona"/>
       <index name="Reserva" columns="Reserva"/>
       <index name="usuario_registro" columns="usuario_registro"/>
       <index name="codigo_operacion" columns="codigo_operacion"/>
@@ -69,21 +68,10 @@
         <join-column name="Tipo" referenced-column-name="Codigo"/>
       </join-columns>
     </many-to-one>
-    <many-to-one field="persona" target-entity="Personas" fetch="LAZY">
-      <join-columns>
-        <join-column name="persona" referenced-column-name="Identificacion"/>
-      </join-columns>
-    </many-to-one>
     <many-to-one field="reserva" target-entity="Movimientos" fetch="LAZY">
       <join-columns>
         <join-column name="Reserva" referenced-column-name="Codigo"/>
       </join-columns>
     </many-to-one>
-    <many-to-one field="usuarioRegistro" target-entity="Personas" fetch="LAZY">
-      <join-columns>
-        <join-column name="usuario_registro" referenced-column-name="Identificacion"/>
-      </join-columns>
-    </many-to-one>
-    <many-to-many field="listado" target-entity="Listados" mapped-by="movimiento" fetch="LAZY"/>
   </entity>
 </doctrine-mapping>

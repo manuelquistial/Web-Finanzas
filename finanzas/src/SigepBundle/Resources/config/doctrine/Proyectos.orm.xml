@@ -2,15 +2,8 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="SigepBundle\Entity\Proyectos" table="proyectos">
     <indexes>
-      <index name="Tipo" columns="Tipo"/>
       <index name="Estado" columns="Estado"/>
-      <index name="TipoContribuyente" columns="TipoContribuyente"/>
-      <index name="dependencia" columns="dependencia"/>
-      <index name="FK_proyectos_propuestas" columns="propuesta"/>
     </indexes>
-    <unique-constraints>
-      <unique-constraint name="codificacion" columns="codificacion,dependencia"/>
-    </unique-constraints>
     <id name="codigo" type="integer" column="codigo">
       <generator strategy="IDENTITY"/>
     </id>
@@ -51,41 +44,10 @@
         <option name="default">Desconocido</option>
       </options>
     </field>
-    <many-to-one field="propuesta" target-entity="Propuestas" fetch="LAZY">
-      <join-columns>
-        <join-column name="propuesta" referenced-column-name="codigo"/>
-      </join-columns>
-    </many-to-one>
-    <many-to-one field="tipo" target-entity="TiposProyecto" fetch="LAZY">
-      <join-columns>
-        <join-column name="Tipo" referenced-column-name="Codigo"/>
-      </join-columns>
-    </many-to-one>
     <many-to-one field="estado" target-entity="EstadosProyecto" fetch="LAZY">
       <join-columns>
         <join-column name="Estado" referenced-column-name="Codigo"/>
       </join-columns>
     </many-to-one>
-    <many-to-one field="tipocontribuyente" target-entity="TiposContribuyente" fetch="LAZY">
-      <join-columns>
-        <join-column name="TipoContribuyente" referenced-column-name="Codigo"/>
-      </join-columns>
-    </many-to-one>
-    <many-to-one field="dependencia" target-entity="Dependencias" fetch="LAZY">
-      <join-columns>
-        <join-column name="dependencia" referenced-column-name="Codigo"/>
-      </join-columns>
-    </many-to-one>
-    <many-to-many field="persona" target-entity="Personas" inversed-by="proyecto" fetch="LAZY">
-      <join-table name="financiadores">
-        <join-columns>
-          <join-column name="proyecto" referenced-column-name="codigo"/>
-        </join-columns>
-        <inverse-join-columns>
-          <join-column name="persona" referenced-column-name="Identificacion"/>
-        </inverse-join-columns>
-      </join-table>
-    </many-to-many>
-    <many-to-many field="grupo" target-entity="Grupos" mapped-by="proyecto" fetch="LAZY"/>
   </entity>
 </doctrine-mapping>

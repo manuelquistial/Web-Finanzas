@@ -1,0 +1,132 @@
+{% extends 'frontend.html.twig' %}
+
+{% block id 'usuario' %}
+
+{% block nav %}
+	<ul class="nav navbar-nav navbar-right">
+		<li class="dropdown">
+	    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><p class="navbar-text"><strong>{{ app.user }} </strong><span class="glyphicon glyphicon-menu-down"></span></p></a>
+			<ul class="dropdown-menu">
+			<li><a href="{{ path('usuario_logout') }}">{{ 'Cerrar sesión'|trans }}</a></li>
+			</ul>
+	    </li>
+	</ul>
+{% endblock %}
+
+{% block article %}
+<div class="container">
+	<div class="row">
+		<div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a><strong>Disponible Consolidado</strong></a>
+		        <a class="navbar-nav navbar-right" style="padding-right: 15px;"><strong>{{ total |number_format(0, ',', '.') }}</strong></a>
+		      </h4>
+		    </div>
+		</div>
+		<div class="container" style="display: flex;flex-wrap: wrap;">
+
+			{% set boxTitle = ['Funcionamiento e Inversion', 'Apoyo a Eventos', 'Editoriales', 'Docentes', 'Investigacion Estudiantil', 'Estudiantes',  'No Docente',  'Extension Solidaria', 'Bienestar Estudiantil', 'Excedentes'] %}
+			{% set modalImg = ['39','144','139','140','142','141','143','145','138','01'] %}
+			{% set var = "" %}
+			{% for box in range(0, (boxTitle|length)-1)%}
+				{% if modalImg[box] == '01' %}
+					{% set var = "data-target=#modalTwo" %}
+				{% endif %}
+
+				<div class="boxes col-xs-3 col-md-2" id="{{modalImg[box]}}" data="{{path('datos_finanzas')}}">
+					<a id="box-finanzas" href="#" class="thumbnail" {{ var }} data-toggle="modal">
+						<img src="{{ asset('assets/img/png/imgBox'~modalImg[box]~'.png') }}" alt="Gastos e Inversion">
+						
+					</a>
+					<div class="caption">
+				    	<h5 id="title-thumb">{{boxTitle[box]}}</h5>
+				    </div>
+				</div>
+
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalOne" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title"><strong id="myModalLabel"></strong></h4>
+		</div>
+		<div class="modal-body">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
+				      <h4 class="panel-title">
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 20px;"><strong id="dis"></strong></a>
+				      </h4>
+				    </div>
+				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					  <div class="panel-body">
+					    <table class="data table text-center">
+						</table>
+					  </div>
+					  <div class="panel-body">
+					    <table class="table text-center table-center">
+							<tr class="table-style">
+								<td><strong>Disponibilidad de Recurso</strong></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Total de Ingresos Netos</td>
+								<td id="inNeto"></td>
+							</tr>
+							<tr>
+								<td>Reservas + Egresos</td>
+								<td id="reEg"></td>
+							</tr>
+							<tr>
+								<td>Recursos Disponibles</td>
+								<td id="reDi"></td>
+							</tr>
+						 </table>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalTwo" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title"><strong id="myModalLabel">Excedentes</strong></h4>
+		</div>
+		<div class="modal-body">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			  	<div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne" href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion"  aria-expanded="true" aria-controls="collapseOne">
+				      <h4 class="panel-title">
+				        <a><strong>Disponible</strong></a>
+				        <a class="navbar-nav navbar-right" style="padding-right: 20px;"><strong></strong></a>
+				      </h4>
+				    </div>
+				    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					  <div class="panel-body">
+					  	<select id="year">
+					  	</select>
+					  </div>
+					  <div class="panel-body">
+					  	<h1>hola</h1>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

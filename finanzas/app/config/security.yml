@@ -1,5 +1,5 @@
 # To get started with security, check out the documentation:
-# http://symfony.com/doc/current/book/security.html
+# http://symfony.com/doc/current/security.html
 security:
 
     firewalls:
@@ -12,20 +12,20 @@ security:
             pattern:        ^/admin
             provider:       administradores
             anonymous:      ~
-            form_login:	
+            form_login: 
                 login_path: admin_login
                 check_path: admin_login_check
-                default_target_path: admin_registro
+                default_target_path: admin_usuarios
                 always_use_default_target_path: true
             logout:
                 path:       admin_logout
 
         # Firewall global utilizado en la parte pública o frontend
         frontend:
-            pattern:        ^/usuario
+            pattern:        ^/
             provider:       usuarios
             anonymous:      ~
-            form_login:	
+            form_login: 
                 login_path: usuario_login
                 check_path: usuario_login_check
                 default_target_path: usuario_finanzas
@@ -34,24 +34,23 @@ security:
                 path:       usuario_logout
 
     access_control:
-        - { path: ^/usuario/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/usuario/*, roles: ROLE_USUARIO }
+        - { path: ^/finanzas/*, roles: ROLE_USUARIO }
         - { path: ^/admin/*, roles: ROLE_ADMIN }
 
     encoders:
         # el coste del algoritmo se ha reducido a 8 para que la carga de los datos
         # de prueba no sea demasiado lenta (se generan cientos de usuarios). En
         # una aplicación real, es mejor no cambiar el valor por defecto (que es 12)
-        Usuario\UsuarioBundle\Entity\Usuario: { algorithm: bcrypt, cost: 8 }
+        UsuarioBundle\Entity\Usuario: { algorithm: bcrypt, cost: 8 }
         Symfony\Component\Security\Core\User\User: { algorithm: bcrypt, cost: 8 }
 
     providers:
         # Usuarios del frontend
         usuarios:
-            entity: { class: Usuario\UsuarioBundle\Entity\Usuario, property: usuario }
+            entity: { class: UsuarioBundle\Entity\Usuario, property: usuario }
         administradores:
-            entity: { class: Usuario\UsuarioBundle\Entity\Usuario, property: usuario }
+            entity: { class: UsuarioBundle\Entity\Usuario, property: usuario }
 
     role_hierarchy:
         ROLE_ADMIN: [ROLE_USUARIO]

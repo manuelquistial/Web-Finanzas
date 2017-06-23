@@ -78,32 +78,9 @@ class Movimientos
     private $tipo;
 
     /**
-     * @var \SigepBundle\Entity\Personas
-     */
-    private $persona;
-
-    /**
      * @var \SigepBundle\Entity\Movimientos
      */
     private $reserva;
-
-    /**
-     * @var \SigepBundle\Entity\Personas
-     */
-    private $usuarioRegistro;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $listado;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->listado = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get fecha
@@ -246,17 +223,6 @@ class Movimientos
     }
 
     /**
-     * Get persona
-     *
-     * @return \SigepBundle\Entity\Personas
-     */
-    public function getPersona()
-    {
-        return $this->persona;
-    }
-
-
-    /**
      * Get reserva
      *
      * @return \SigepBundle\Entity\Movimientos
@@ -264,27 +230,5 @@ class Movimientos
     public function getReserva()
     {
         return $this->reserva;
-    }
-
-
-    /**
-     * Get usuarioRegistro
-     *
-     * @return \SigepBundle\Entity\Personas
-     */
-    public function getUsuarioRegistro()
-    {
-        return $this->usuarioRegistro;
-    }
-
-
-    /**
-     * Get listado
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getListado()
-    {
-        return $this->listado;
     }
 }

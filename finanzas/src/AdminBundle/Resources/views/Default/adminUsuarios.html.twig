@@ -1,0 +1,45 @@
+{% extends '::admin.html.twig' %}
+
+{% block navLi %}
+	<ul class="nav navbar-nav">
+		<li role="navigation" class="active"><a href="{{ path('admin_usuarios') }}">Lista Usuarios</a></li>
+		<li role="navigation"><a href="{{ path('admin_registro') }}">Registro Usuarios</a></li>
+	</ul>
+{% endblock %}
+
+{% block article %}
+<div id="content" class="col-sm-9 col-md-9 col-centered">
+	<div class="table-responsie">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th><strong>Usuario</strong></th>
+					<th><strong>Nombre</strong></th>
+					<th><strong>Apellidos</strong></th>
+					<th><strong>E-Mail</strong></th>
+					<th><strong>Role</strong></th>
+					<th><strong>Accion</strong></th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for usuario in usuarios %}
+				<tr>
+					<td>{{ usuario.usuario }}</td>
+					<td>{{ usuario.nombre }}</td>
+					<td>{{ usuario.apellidos }}</td>
+					<td>{{ usuario.email }}</td>
+					<td>{% for var in usuario.roles %}
+						{% if var == "ROLE_USUARIO" %}
+							<span>Usuario</span>
+						{% elseif var == "ROLE_ADMIN" %}
+							<span>Admin</span>
+						{% endif %}
+					{% endfor %}</td>
+					<td><a href="{{ path('admin_borrar', { 'id': usuario.id }) }}"><span class="btn btn-danger" aria-hidden="true"><span class="fa fa-trash-o" aria-hidden="true"></span></span></a></td>
+				</tr>
+			{% endfor %}
+			</tdoby>
+		</table>
+	</div>
+</div>
+{% endblock%}

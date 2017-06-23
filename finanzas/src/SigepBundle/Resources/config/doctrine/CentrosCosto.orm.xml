@@ -14,6 +14,5 @@
         <option name="fixed"/>
       </options>
     </field>
-    <many-to-many field="usuario" target-entity="Usuarios" mapped-by="centroCosto" fetch="LAZY"/>
   </entity>
 </doctrine-mapping>
